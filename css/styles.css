@@ -1,5 +1,5 @@
 @charset "UTF-8";
-html::before {
+body::before {
   content: "";
   position: fixed;
   top: -50px;
@@ -16,7 +16,6 @@ html::before {
 html {
 	font-family: Tahoma, Verdana, sans-serif;
 	color: #333;
-	background-image: url('https://magpie512.github.io/Comp1002/images/LegoBackground.jpg');
 }
 
 :root {
