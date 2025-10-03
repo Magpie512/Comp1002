@@ -1,0 +1,25 @@
+@charset "UTF-8";
+html {
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 1rem;
+	margin: 0;
+	border: 1px solid darkblue;
+}
+
+body {
+	font-family: Tahoma, Verdana, sans-serif;
+	margin: 0;
+}
+/* Arrange the SECTION and the ASIDE elements side-by-side in columns */
+main {
+	display: flex;
+	flex-direction: row;
+}
+/* Make the SECTION column a bit wider than the ASIDE column */
+main section {
+	width: 60%;
+}
+main aside {
+	width: 40%;
+}
