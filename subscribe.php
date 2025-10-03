@@ -17,14 +17,15 @@
 		<!-- Page-level main content -->
 		<main>
 			<section>
-				<h3>Thank You for Subscribing</h3>
-<?php
-// Capture the value of the emailAddress INPUT from the index.php page by defining a PHP variable called '$emailAddress' and setting the value to the email address as entered by the user in the FORM on index.php
-	$emailAddress = $_GET['emailAddress'];
-// Use the PHP function, echo() to create an HTML paragraph element that confirms the user's email address -->
-	echo('<p>Your email address, '.$emailAddress.' has been added to our list of subscribers.</p>');
-?>
-			</section>
+  <h3>Thank You for Subscribing</h3>
+  <?php
+    // Capture and sanitize the email address from the GET request
+    $emailAddress = htmlspecialchars($_GET['emailAddress']);
+
+    // Display confirmation message
+    echo('<p>Your email address, ' . $emailAddress . ' has been added to our list of subscribers.</p>');
+  ?>
+</section>
 		</main>
 		<!-- Page-level footer -->
 		<footer>
@@ -32,3 +33,4 @@
 		</footer>
 	</body>
 </html>
+
