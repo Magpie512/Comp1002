@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body::before { <!-- html::before is largely deprecated.  body::before works and so it shall be -->
+body::before {
   content: "";
   position: fixed;
   top: -50px;
