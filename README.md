@@ -9,6 +9,7 @@ https://magpie512.github.io/Comp1002/lab-b/index.html
 https://magpie512.github.io/Comp1002/lab-c/about.php
 
 ## Lab D
+https://magpie512.github.io/Comp1002/lab-d/about.html
 
 ## Pizza Website
 https://magpie512.github.io/Comp1002/pizzawebsite/index.html
