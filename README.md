@@ -1,4 +1,4 @@
-# Comp1002 | Html, Css, Java
+# Html, Css, Java
 
 ## Lab B
 
@@ -7,5 +7,6 @@
 ## Lab D
 
 ## Pizza Website
+https://magpie512.github.io/Comp1002/pizzawebsite/index.html
 
 ## Poster Website
