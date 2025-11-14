@@ -1,0 +1,234 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 1px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+a {
+    font-size: 0.8rem;
+    color: #fff200;
+    text-decoration: none;
+}
+
+.poster-pair a {
+    font-size: 1em;
+    color: #0066cc;
+    text-decoration: none;}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.poster-pair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+}
+
+.poster-pair p {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.poster-pair img {
+    width: 75%;
+    height: auto;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+.original-poster {
+    width: 85%;
+    max-width: 350px;
+}
+
+.poster-container {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.poster-container img { /*resisting the urge to manually crop this man*/
+    width: 99%;
+    height: auto;
+    display: block;
+}
+
+.frame {
+    position: absolute;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.white-frame {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 20px solid white;
+    z-index: 2;
+}
+
+.black-frame {
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    border-style: solid;
+    border-width: 40px 30px 60px 30px;
+    border-color: black;
+    z-index: 3;
+}
+
+/*Text Elements*/
+
+.tagline {
+    font-weight: bold;
+    position: absolute;
+    top: 26px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Arial Narrow', sans-serif;
+    font-size: 1em;
+    word-spacing: 1.3px;
+    letter-spacing: -0.4px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    z-index: 4;
+    padding-top: 12px;
+}
+
+.tiny-title {
+    position: absolute;
+    top: 67.2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'SF Movie Poster', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.1;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    z-index: 5;
+}
+
+.tiny-the {/*THE*/
+    position: absolute;
+    top: 69.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: Impact, sans-serif;
+    font-size: 0.56em;
+    line-height: 1.1;
+    color: #fff;
+    z-index: 7;
+    -webkit-text-stroke: 0.5px #000;
+    letter-spacing: -0.05em;
+    color: white;
+    text-shadow:
+        2px 4px 6px rgba(0, 0, 0, 0.9),
+        1px 3px 4px rgba(0, 0, 0, 0.6),
+        3px 5px 8px rgba(0, 0, 0, 0.4);
+}
+
+.title { /*THING*/
+    position: absolute;
+    top: 74%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: Impact, sans-serif;
+    font-size: 2.8em;
+    line-height: 1.1;
+    color: #fff;
+    z-index: 7;
+    -webkit-text-stroke: 1px #000;
+    letter-spacing: -0.05em;
+
+    /* --- Shorter Melting Effect --- */
+
+    text-shadow:
+        /* Original base shadow */
+        2px 4px 6px rgba(0, 0, 0, 0.9),
+
+        /* Tight Drip Layers (Max y-offset reduced from 32px to 15px) */
+        1px 3px 2px rgba(0, 0, 0, 0.7),
+        -1px 4px 2px rgba(0, 0, 0, 0.7),
+        2px 6px 3px rgba(0, 0, 0, 0.6),
+        -2px 7px 3px rgba(0, 0, 0, 0.6),
+
+        /* Fading out sooner */
+        1px 9px 4px rgba(0, 0, 0, 0.5),
+        -1px 11px 4px rgba(0, 0, 0, 0.4),
+        0px 13px 5px rgba(0, 0, 0, 0.3),
+        0px 15px 6px rgba(0, 0, 0, 0.2);
+
+    /* Animation remains for wobble effect */
+    filter: drop-shadow(0 0px 4px rgba(0, 0, 0, 0.9));
+    animation: melt-wobble 4s ease-in-out infinite alternate;
+}
+
+.credits {
+    position: absolute;
+    bottom: 30px;
+    width: 90%;
+    left: 5%;
+    font-family: 'Univers 39', sans-serif;
+    font-size: 0.45em;
+    line-height: 1.2;
+    color: #6f9bdc;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    z-index: 4;
+}
+
+@font-face {
+    font-family: 'SF Movie Poster';
+    font-style: normal;
+    font-weight: 700;
+    src: local('SF Movie Poster'), url('https://fonts.cdnfonts.com/s/41513/SF-Movie-Poster-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Univers 39';
+  src: url('Univers39ThinUltraCondensed.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: ultra-condensed;
+}
+
+@keyframes melt-wobble {
+    0% { filter: drop-shadow(0 0px 4px rgba(0, 0, 0, 0.9)); }
+    50% { filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.9)); }
+    100% { filter: drop-shadow(0 0px 4px rgba(0, 0, 0, 0.9)); }
+}
+

@@ -1,0 +1,221 @@
+@charset "UTF-8";
+body::before {
+  content: "";
+  position: fixed;
+  top: -50px;
+  left: -50px;
+  width: calc(100% + 100px);
+  height: calc(100% + 100px);
+  background-image: url("https://magpie512.github.io/Comp1002/images/LegoBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+html {
+	font-family: Tahoma, Verdana, sans-serif;
+	color: #333;
+}
+
+:root {
+  --pastel-red: #FFB3BA;
+  --pastel-blue: #B3D1FF;
+  --pastel-yellow: #FFF1B3;
+  --pastel-green: #B3FFCC;
+  --pastel-orange: #FFD9B3;
+  --pastel-purple: #E0B3FF;
+  --soft-gray: #F4F4F4;
+  --text-color: #333;
+}
+
+body {
+	margin: 0 auto;
+	min-width: 768px;
+	max-width: 1024px;
+	color: var(--text-color);	
+}
+
+header {
+	background-color: var(--pastel-blue);
+	border-bottom: 6px solid var(--pastel-red);
+	padding: 1em 0;
+	margin-bottom: 1em;
+	background-color: var(--pastel-blue);
+	border-bottom: 4px solid var(--pastel-red);
+	border-radius: 0 0 6px 6px;
+}
+
+header h1 {
+	margin: 0;
+	padding: 0 0 0 1em;
+	font-size: 1.5em;
+	font-weight: normal;
+	display: inline;
+}	
+
+header h2 {
+	margin: 0;
+	padding: 0 0 0 1em;
+	font-size: 1em;
+	font-weight: normal;
+	display: inline;
+	color: #666;
+}
+
+h1, h2, h3, h4{
+	font-family: 'Bungee', sans-serif;	
+}
+
+nav {
+	margin-top: 0.5em;
+	padding: 0 0 0 .5em;
+	position: sticky;
+	top: 0;
+	background-color: var(--pastel-blue);
+	z-index: 1000;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}	
+
+nav ul li {
+	display: inline;
+	margin-right: 1em;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: var(--text-color);
+	font-weight: bold;
+}
+
+nav ul li a:hover {
+	color: #cc6677;
+}
+
+h3 {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 0.25em;
+	margin-bottom: 0.5em;
+}
+
+blockquote {
+	border-left: 4px solid #ccc;
+	margin: 0 1em;
+	padding: 0 1em ;
+	font-style: italic;
+	color: #666;
+	background-color: #f9f9f9;
+}
+
+.quote {
+	display: block;
+	text-align: right;
+	font-style: italic;
+	margin-top: 0.5em;
+	color: #666;
+}
+
+/* Arrange the SECTION and the ASIDE elements side-by-side in columns */
+main {
+	display: flex;
+	flex-direction: row;
+}
+/* Make the SECTION column a bit wider than the ASIDE column */
+main section {
+	background-color: var(--pastel-green);
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	width: 60%;
+}
+main aside {
+	width: 40%;
+	background-color: var(--pastel-yellow);
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	margin: 0 0 1em 1em;
+	padding: 0.5em;
+}
+
+main aside img {
+	display: block;
+	margin: 0 auto;
+}
+
+main aside h3 {
+	text-align: center;
+}
+
+main aside blockquote {
+	border-color: var(--pastel-red);
+	border-radius: 6px;
+	margin: 0;
+	padding: 0.5em 1em;
+	background-color: var(--pastel-green)
+}
+
+figcaption {
+	font-size: 0.8em;
+	text-align: center;
+	color: #666;
+	margin-top: 0.25em;
+}
+
+.author {
+	font-style: italic;
+	font-size: 0.9em;
+	margin: -1.5em 0 -0.5em 0;
+}
+
+.read-more {
+	display: block;
+	padding: 0.4em 0.8em;
+	background-color: var(--primary);
+	text-decoration: underline;
+	cursor: pointer;
+	color: #0066cc;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;	
+}
+.read-more:hover {
+	color: #004499;
+}
+
+.brackets {
+	font-style: italic;
+	color: #8a8a8a;
+}
+
+/* Add a light gray border around each ARTICLE */
+article {
+	background-color: var(--pastel-yellow);
+	border: 1px solid #ccc;
+	border-left: 6px solid var(--pastel-red);
+	border-radius: 6px;
+	margin: 0 0 1em 0;
+	padding: 0.5em;
+}
+
+article:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}	
+
+article, aside, section {
+	box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+footer {
+	background-color: var(--pastel-blue);
+	border-top: 2px solid var(--pastel-green);
+	border-radius: 6px 6px 0 0;
+	padding: 1em 0;
+	margin-top: 1em;
+	text-align: center;
+	font-size: 0.75em;
+	color: #444;
+}
