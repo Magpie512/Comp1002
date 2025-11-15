@@ -1,6 +1,6 @@
 # Html, Css, Java
-Need to fix routing for B, C, Pizza, and Poster
-DEF POSTER
+#### Reminders for me
+Need to fix routing for B, C, Pizza
 
 ## Lab B
 https://magpie512.github.io/Comp1002/lab-b/index.html
