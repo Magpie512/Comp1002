@@ -1,0 +1,83 @@
+:root {
+    --primary-color: #f7cc61; /*soft yellow for that retro feel*/
+    --secondary-color: #f4f1ee; /*light beige for background*/
+
+}
+
+/* IDEA: WOOD GRAIN TEXTURE FOR HEADER AND FOOTER? */
+
+
+*{
+    outline: 1px solid black; /*learned this trick while working on my wheel iof fortune fan game for my gf*/
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace; /*Type writer font-ish for ye old vibes*/
+}
+
+main {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+/* god. remembering the syntax for a comment sucks
+but anyway, i wanna try using my transparent designs resources at some point
+i think that would be cool */
+
+body button {
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+img {
+    border: 5px solid var(--primary-color);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 10px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* CROPPING ATTEMPT
+.cropped
+    object-fit: fill;
+    object-position: center;
+    clip-path: inset(px 50px 45px 36px); 
+*/
+/* top right bottom left */
+/* Turned out pretty well. Yipee (No. how do i border this? me no no, me monkey*/
+/* Didnt work man*/
