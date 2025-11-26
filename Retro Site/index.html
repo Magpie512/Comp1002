@@ -13,9 +13,10 @@ website) It's just going to be one page and possibly a link navigating to a BUY 
 </head>
 
 <header>
-    <h1>Welcome to the Retro Gramophone Store!</h1>
+    <h1>Welcome to the <br> Retro Gramophone Store!</h1>
     <nav>
         <a href="pages/about.html">About The Gramophone</a>
+        <!-- <a href="pages/products.html">Our Other Products</a> actually no other products -->
     </nav>
 </header>
 
@@ -25,20 +26,37 @@ website) It's just going to be one page and possibly a link navigating to a BUY 
 
     <body>
 
-    <section id="product-display">
-        <h2>Featured Product: The Classic Gramophone</h2>
-        <img src="img/gramophone-on-white-background.jpg" alt="Classic Gramophone" width="300"> <!-- istockphoto.com-->
-        <p>Step back in time with our exquisite Classic Gramophone, a true marvel of 19th-century engineering. 
-           Experience the rich, warm sounds of your favorite tunes as they were meant to be heard.</p>
-        <ul>
-            <li>Elegant wooden cabinet</li>
-            <li>Hand-cranked mechanism</li>
-            <li>Compatible with 78 RPM records</li>
-            <li>Perfect for collectors and music enthusiasts</li>
-        </ul>
-        <button onclick="window.location.href='pages/buy.html'">BUY NOW</button>
-    </section>
-    
+        <section id="product-display">
+            <h2>Featured Product:The Classic Gramophone</h2>
+            <div class="image-container">
+                <img src="img/gramophone-on-white-background.jpg" alt="Classic Gramophone" width="300">
+                <!-- istockphoto.com-->
+                <div class="price-display">
+                    <p>Price: $299.99</p>
+                </div>
+            </div>
+            <div><audio controls>
+                    <source
+                        src="mp3/What does a 100 year old gramophone record sound like - The Gramophone Girl (youtube).mp3"
+                        type="audio/mpeg"> <!--from freesound.org-->
+                    Your browser does not support the audio element.
+                </audio>
+                <!-- Audio taken from The Grammophone Girl on youtube https://www.youtube.com/watch?v=fuIByhMPYfs-->
+            </div>
+            <div class="facts">
+                <p>Step back in time with our exquisite Classic Gramophone, a true marvel of 19th-century engineering.
+                    Experience the rich, warm sounds of your favorite tunes as they were meant to be heard.</p>
+                <ul>
+                    <li>Elegant wooden cabinet</li>
+                    <li>Hand-cranked mechanism</li>
+                    <li>Compatible with 78 RPM records</li>
+                    <li>Perfect for collectors and music enthusiasts</li>
+                </ul>
+            </div>
+            <button onclick="window.location.href='https://youtu.be/dQw4w9WgXcQ?si=jBRcAQNplYwdtxy0'">BUY NOW</button>
+        </section>
+        <!--(this link is a placeholder and will lead to rick astley's never gonna give you up video on youtube)-->
+
     </body>
 
 </main>
@@ -46,4 +64,5 @@ website) It's just going to be one page and possibly a link navigating to a BUY 
 <footer>
     <p>&copy; 1887 Ye Olde Gramophone Store. All rights reserved.</p>
 </footer>
+
 </html>

@@ -1,14 +1,21 @@
 :root {
-    --primary-color: #f7cc61; /*soft yellow for that retro feel*/
+    --primary-color: #b9912d; /*soft yellow for that retro feel*/
     --secondary-color: #f4f1ee; /*light beige for background*/
+    --hover-color: #a07f28; /*darker yellow for hover effects*/
+    --background-header-footer-texture: url('../img/retina-wood.png');
+    --background-texture: url('../img/dark-wood.png');
+    --background-color: #69564a;
+    --price-color: #bc0d0d;
+
 
 }
 
-/* IDEA: WOOD GRAIN TEXTURE FOR HEADER AND FOOTER? */
-
-
 *{
-    outline: 1px solid black; /*learned this trick while working on my wheel iof fortune fan game for my gf*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    outline: 3px solid #000;
 }
 
 header {
@@ -16,18 +23,32 @@ header {
     padding: 20px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace; /*Type writer font-ish for ye old vibes*/
+    background-image: url('../img/dark-wood.png'); /*trying out wood grain texture*/
+    /*Btw any of these textures are from https://www.transparenttextures.com/, check them out*/
+    background-size: cover;
+}
+
+header h1 {
+    color: #000;
+    font-weight: bold;
 }
 
 main {
     text-align: center;
-    font-family: 'Arial', sans-serif;
-    background-color: var(--secondary-color);
+    font-family: 'Courier New', Courier, monospace;
+    background-image: var(--background-texture);
+    background-color: var(--background-color);
     padding: 20px;
+    min-height: 84vh; /*ensures footer stays at bottom*/
 }
 
-/* god. remembering the syntax for a comment sucks
-but anyway, i wanna try using my transparent designs resources at some point
-i think that would be cool */
+main h2 {
+    background-color: var(----background-color);
+    background-image: var(--background-header-footer-texture);
+    background-size: cover;
+    color: #000;
+    font-weight: bold;
+}
 
 body button {
     background-color: var(--primary-color);
@@ -37,29 +58,55 @@ body button {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    margin: 10px;
+    margin: 13px 0px 20px 0px;
+}
+
+button:hover { /* found out the colon cant have a space after it, oops */
+    background-color: var(--hover-color); /*darker shade on hover*/
+    cursor: pointer;
+    transform: scale(1.20); /*slight zoom effect*/
+    transition: transform 0.2s;
+}
+
+nav {
+    margin-top: 10px;
+    padding: 10px 0 10px 0;
 }
 
 nav a {
-    margin: 0 15px;
-    text-decoration: none;
+    text-decoration: underline;
     color: #000;
     font-weight: bold;
+    padding: 10px 15px;
+    font-size: 1.3rem;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: var(--hover-color);
+}
+
+.image-container{
+    position: relative;
+    display: inline-block;
+    margin: 20px;
 }
 
 img {
     border: 5px solid var(--primary-color);
     border-radius: 10px;
-    margin: 20px 0;
+    object-fit: cover;
 }
 
-p {
+audio {
+    margin: 0 0 20px 0; /* up right down left, son */
+}
+
+.facts p, .facts li, .facts ul{
+    background-color: var(--background-color);
+    background-image: var(--background-header-footer-texture);
     font-size: 18px;
-    color: #333;
+    padding: 0.5rem 0 0.5rem 0;
+    list-style: none;
 }
 
 footer {
@@ -67,9 +114,16 @@ footer {
     padding: 10px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    bottom: 0;
+    background-image: url('../img/dark-wood.png');
+    background-size: cover;
     position: fixed;
     width: 100%;
-    bottom: 0;
+}
+
+header, footer p{
+    color: #000;
+    font-weight: bold;
 }
 
 /* CROPPING ATTEMPT
@@ -81,3 +135,48 @@ footer {
 /* top right bottom left */
 /* Turned out pretty well. Yipee (No. how do i border this? me no no, me monkey*/
 /* Didnt work man*/
+
+
+
+.price-display {
+    position: absolute;
+    background-color: var(--price-color);
+    top: 4vh;
+    left: -100px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transform: rotate(-24deg);
+}
+
+.price-display p {
+    margin: 0;
+    color: white;
+    pointer-events: none;
+}
+
+.price-display:hover {
+    cursor: pointer;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: scale(1) rotate(-20deg); filter: brightness(1); }
+    25% { transform: scale(1.1) rotate(-22deg); filter: brightness(1.2); }
+    50% { transform: scale(1.15) rotate(-18deg); filter: brightness(1.3); }
+    75% { transform: scale(1.1) rotate(-22deg); filter: brightness(1.2); }
+    100% { transform: scale(1) rotate(-20deg); filter: brightness(1); }
+}
+
+.text-block {
+    background-color: var(--background-color);
+    background-image: var(--background-header-footer-texture);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
