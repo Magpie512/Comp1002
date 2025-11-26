@@ -18,4 +18,4 @@ https://magpie512.github.io/Comp1002/pizzawebsite/index.html
 https://magpie512.github.io/Comp1002/posterAssignment/index.html
 
 ## Retro Site
-https://magpie512.github.io/Comp1002/
+https://magpie512.github.io/Comp1002/Retro%20Site/index.html
