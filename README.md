@@ -1,17 +1,11 @@
 # Web Development Projects (HTML, CSS, Java)
 
-### Reminders
-- Fix routing for Lab B
-- Fix routing for Lab C
-- Fix routing for Pizza Website
-
----
-
 ## Labs
 - [Lab B](https://magpie512.github.io/Comp1002/lab-b/index.html)
 - [Lab C](https://magpie512.github.io/Comp1002/lab-c/about.php)
 - [Lab D](https://magpie512.github.io/Comp1002/lab-d/about.html)
-
+- [Lab E](https://magpie512.github.io/Comp1002/lab-e/index.html)
+  
 ---
 
 ## Themed Websites
