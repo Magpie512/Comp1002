@@ -15,12 +15,11 @@
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
-    outline: 3px solid #000;
 }
 
 header {
     background-color: var(--primary-color);
-    padding: 20px;
+    padding: 0.2vh;
     text-align: center;
     font-family: 'Courier New', Courier, monospace; /*Type writer font-ish for ye old vibes*/
     background-image: url('../img/dark-wood.png'); /*trying out wood grain texture*/
@@ -31,6 +30,7 @@ header {
 header h1 {
     color: #000;
     font-weight: bold;
+    font-size: 2vh;
 }
 
 main {
@@ -38,27 +38,37 @@ main {
     font-family: 'Courier New', Courier, monospace;
     background-image: var(--background-texture);
     background-color: var(--background-color);
-    padding: 20px;
-    min-height: 84vh; /*ensures footer stays at bottom*/
+    padding: 0.2vh 2vw 2vh 2vw;
+    min-height: 100vh; /*ensures footer stays at bottom*/
 }
 
 main h2 {
-    background-color: var(----background-color);
-    background-image: var(--background-header-footer-texture);
     background-size: cover;
     color: #000;
     font-weight: bold;
 }
 
-body button {
+.product-display {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 10px;
+    background-color: var(--background-color);
+    background-image: var(--background-header-footer-texture);
+} /*Holy I LOVE what this did*/
+
+button {
+    font-weight: bold;
     background-color: var(--primary-color);
-    color: #000;
     border: none;
+    color: #000;
     padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
     font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 13px 0px 20px 0px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 button:hover { /* found out the colon cant have a space after it, oops */
@@ -70,15 +80,14 @@ button:hover { /* found out the colon cant have a space after it, oops */
 
 nav {
     margin-top: 10px;
-    padding: 10px 0 10px 0;
 }
 
 nav a {
     text-decoration: underline;
     color: #000;
     font-weight: bold;
-    padding: 10px 15px;
-    font-size: 1.3rem;
+    padding: 0.2vh 2vw 2vh 2vw;
+    font-size: 1.7vh;
 }
 
 nav a:hover {
@@ -88,7 +97,7 @@ nav a:hover {
 .image-container{
     position: relative;
     display: inline-block;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 img {
@@ -98,7 +107,7 @@ img {
 }
 
 audio {
-    margin: 0 0 20px 0; /* up right down left, son */
+    margin: 0 0 10px 0; /* up right down left, son */
 }
 
 .facts p, .facts li, .facts ul{
@@ -141,8 +150,8 @@ header, footer p{
 .price-display {
     position: absolute;
     background-color: var(--price-color);
-    top: 4vh;
-    left: -100px;
+    top: 1vh;
+    left: -50px;
     font-size: 14px;
     font-weight: bold;
     color: #000;
@@ -150,7 +159,7 @@ header, footer p{
     border-radius: 5px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
     z-index: 10;
-    transform: rotate(-24deg);
+    transform: rotate(-30deg);
 }
 
 .price-display p {
@@ -179,4 +188,15 @@ header, footer p{
     margin: 20px auto;
     max-width: 800px;
     border-radius: 10px;
+}
+
+figure {
+    margin-top: 15px;
+}
+
+figcaption {
+    font-size: 14px;
+    color: #000;
+    margin-top: 8px;
+    font-weight: bold;
 }
