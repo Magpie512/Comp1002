@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Edison-Bell Talking Machine Emporium - Est. 1890</title>
+    <title>The Edison-Bell Talking Machine Emporium</title>
     <link rel="icon" href="img/Gemini_Generated_Image_40t77540t77540t7-Photoroom.ico" type="image/x-icon">
     <!-- this is AI. I generated this with gemini-->
     <!-- why is ico a gold icon. thats pretty cool-->
@@ -40,6 +40,8 @@
         <a href="#" onclick="showSection('contact'); return false;">Telegraph Us</a>
     </nav>
     <main>
+
+
         <!-- HOME SECTION -->
         <section id="home" class="content-section">
             <div class="announcement-box">
@@ -74,6 +76,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- CATALOGUE SECTION -->
         <section id="catalogue" class="content-section" style="display:none;">
             <h2>Our Distinguished Catalogue</h2>
@@ -102,12 +106,9 @@
                     World's Fair!</p>
                 <button onclick="selectModel('Grand Exhibition', 45)">Inquire</button>
             </div>
-            <div id="selection-message" class="message-box"></div>
-            <div class="cta-box">
-                <button onclick="handlePurchaseInquiry()" class="purchase-btn"> PLACE YOUR ORDER </button>
-                <p class="delivery-note">*Delivery by Horse-Drawn Carriage within City Limits*</p>
-            </div>
         </section>
+
+
         <!-- TESTIMONIALS SECTION -->
         <section id="testimonials" class="content-section" style="display:none;">
             <h2>Testimonials from Distinguished Patrons</h2>
@@ -138,11 +139,13 @@
             </div>
             <div id="new-testimonials"></div>
         </section>
+
+
         <!-- DEMONSTRATION SECTION -->
         <section id="demonstration" class="content-section" style="display:none;">
             <h2>Demonstration of the Apparatus</h2>
             <div class="demonstration-box">
-                <p><strong>Hear the Wonder for Yourself!</strong></p>
+                <h3>Hear the Wonder for Yourself!</h3> <!-- that heading is better -->
                 <p>Below, you may hear an authentic recording as produced by our magnificent machine:</p>
                 <!-- Hidden audio element -->
                 <audio id="audio-player" style="display:none;">
@@ -197,7 +200,20 @@
                     Recordings Played Today: <span id="counter">0</span>
                 </div>
             </div>
-            <div class="instruction-box">
+            
+            <!-- this is gonna suck!-->
+            <!-- Video Player Embed -->
+            <div class="video-container">
+                <h3>Watch a Demonstration Video:</h3>
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/Vb6aLcH9py4"> <!--oh theres an embed specific url? AI helped here -->
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+                 <!-- Video taken from mrrgstuff on youtube https://www.youtube.com/watch?v=Vb6aLcH9py4-->
+            
+
                 <h3>Operating Instructions</h3>
                 <ol>
                     <li>Wind the hand-crank mechanism clockwise until resistance is felt (approximately 15 turns)</li>
@@ -205,9 +221,15 @@
                     <li>Gently lower the reproducer needle onto the outer groove of the disc</li>
                     <li>The apparatus shall commence playing automatically</li>
                     <li>When the recording concludes, lift the reproducer and remove the disc</li>
-                </ol>
-            </div>
+                </ol>  
+
+                <!-- idk if i like this change more but we roll-->
+
+               </div>
+
         </section>
+
+
         <!-- CONTACT SECTION -->
         <section id="contact" class="content-section" style="display:none;">
             <h2>Telegraph Us</h2>
@@ -220,13 +242,15 @@
                 <h3>Or Send Us a Telegraph Message:</h3>
                 <form id="contact-form" onsubmit="sendTelegraphMessage(); return false;">
                     <label for="name">Your Name:</label><br>
-                    <input type="text" id="name" name="name" required placeholder="Enter your name"><br><br>
+                    <input type="text" id="name" name="name" required placeholder="Enter your established name"><br><br>
                     <label for="message">Your Message:</label><br>
                     <textarea id="message" name="message" rows="4" required></textarea><br><br>
                     <button type="submit">Send Telegraph</button>
                 </form>
             </div>
     </main>
+
+
     <footer>
         <div class="footer-content">
             <p><strong>The Edison-Bell Talking Machine Emporium</strong></p>
@@ -240,3 +264,11 @@
     </footer>
 </body>
 </html>
+
+<!-- I started this rewrite whenever I last uploaded to git and I fucking havent taken a break once.-->
+
+<!-- I can redo the nav in mobile but my head hurts
+ I can fix the player maybe but it as hard enough figuring it out as is. I just wanna play blue prince
+ with my wife and maybe do math -->
+
+ <!-- might workl on it more but i feel sick as is abt this,. i wanna nap-->
