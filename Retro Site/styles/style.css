@@ -1,202 +1,698 @@
+/* gpt rid of the wood. kinda made it smell like moldy wood in  my brain. ewwies */
 :root {
-    --primary-color: #b9912d; /*soft yellow for that retro feel*/
-    --secondary-color: #f4f1ee; /*light beige for background*/
-    --hover-color: #a07f28; /*darker yellow for hover effects*/
-    --background-header-footer-texture: url('../img/retina-wood.png');
-    --background-texture: url('../img/dark-wood.png');
-    --background-color: #69564a;
-    --price-color: #bc0d0d;
-
-
+    --antique-parchment: #f4e8d0;
+    --sepia-brown: #3d2817;
+    --burgundy-red: #8b1a1a;
+    --brass-gold: #b8860b;
+    --dark-wood: #2c1810;
+    --aged-paper: #e8dcc4;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
 }
 
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--antique-parchment);
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+    color: var(--sepia-brown);
+    line-height: 1.6;
+}
+
+/* Header - with pazazz */
 header {
-    background-color: var(--primary-color);
-    padding: 0.2vh;
+    background: linear-gradient(to bottom, #1a1108, #3d2817);
+    border-bottom: 5px double var(--brass-gold);
+    padding: 30px 20px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace; /*Type writer font-ish for ye old vibes*/
-    background-image: url('../img/dark-wood.png'); /*trying out wood grain texture*/
-    /*Btw any of these textures are from https://www.transparenttextures.com/, check them out*/
-    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.ornamental-border {
+    border: 3px solid var(--brass-gold);
+    border-style: double;
+    padding: 20px;
+    background-color: rgba(244, 232, 208, 0.1);
 }
 
 header h1 {
-    color: #000;
-    font-weight: bold;
-    font-size: 2vh;
+    font-size: 2.5em;
+    color: var(--brass-gold);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: normal;
 }
 
-main {
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    background-image: var(--background-texture);
-    background-color: var(--background-color);
-    padding: 0.2vh 2vw 2vh 2vw;
-    min-height: 100vh; /*ensures footer stays at bottom*/
+.est-date {
+    color: var(--aged-paper);
+    font-size: 1.1em;
+    font-style: italic;
+    margin: 10px 0;
 }
 
-main h2 {
-    background-size: cover;
-    color: #000;
-    font-weight: bold;
+.tagline {
+    color: var(--aged-paper);
+    font-size: 1em;
+    font-style: italic;
+    margin-top: 5px;
 }
 
-.product-display {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    border-radius: 10px;
-    background-color: var(--background-color);
-    background-image: var(--background-header-footer-texture);
-} /*Holy I LOVE what this did*/
-
-button {
-    font-weight: bold;
-    background-color: var(--primary-color);
-    border: none;
-    color: #000;
-    padding: 10px 20px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-button:hover { /* found out the colon cant have a space after it, oops */
-    background-color: var(--hover-color); /*darker shade on hover*/
-    cursor: pointer;
-    transform: scale(1.20); /*slight zoom effect*/
-    transition: transform 0.2s;
-}
-
+/* Navigation */
 nav {
-    margin-top: 10px;
+    background-color: var(--dark-wood);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
 }
 
 nav a {
-    text-decoration: underline;
-    color: #000;
+    color: var(--aged-paper);
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 1.1em;
+    transition: all 0.3s;
     font-weight: bold;
-    padding: 0.2vh 2vw 2vh 2vw;
-    font-size: 1.7vh;
 }
 
 nav a:hover {
-    color: var(--hover-color);
+    color: var(--brass-gold);
+    text-decoration: none; /* changed from underline*/
 }
 
-.image-container{
+/* Main Content */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: 70vh;
+}
+
+.content-section {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--burgundy-red);
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--brass-gold);
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: var(--sepia-brown);
+    margin: 20px 0 10px 0;
+}
+
+/* Announcement Box */
+.announcement-box {
+    border: 4px double var(--burgundy-red);
+    padding: 25px;
+    margin: 30px auto;
+    background-color: var(--aged-paper);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+.fancy-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--burgundy-red);
+    letter-spacing: 2px;
+    margin: 15px 0;
+}
+
+/* Product Showcase */
+.product-showcase {
+    text-align: center;
+    margin: 40px auto;
     position: relative;
-    display: inline-block;
+}
+
+.product-showcase img {
+    max-width: 100%;
+    height: auto;
+    border: 8px solid var(--dark-wood);
+    border-style: ridge;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.price-tag {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    background-color: var(--burgundy-red);
+    color: var(--aged-paper);
+    padding: 20px;
+    border: 3px solid var(--brass-gold);
+    border-style: double;
+    transform: rotate(5deg);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+    font-weight: bold;
+}
+
+.price-amount {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.price-note {
+    display: block;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+/* Description Box */
+.description-box {
+    background-color: var(--aged-paper);
+    border: 3px double var(--sepia-brown);
+    padding: 30px;
+    margin: 30px auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+.description-box p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.features-list {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.5);
+    border-left: 4px solid var(--brass-gold);
+}
+
+.features-list ul {
+    list-style: circle;
+    /*this is what I thought disc did on the test*/ 
+    padding-left: 20px;
+}
+
+.features-list li {
+    margin: 10px 0;
+    font-size: 1.1em;
+    padding-left: 10px;
+}
+
+/* Buttons - Victorian Style */
+button, .purchase-btn, .secondary-btn {
+    background: linear-gradient(to bottom, var(--burgundy-red), #6b0f0f);
+    color: var(--aged-paper);
+    border: 3px solid var(--brass-gold);
+    border-style: outset;
+    padding: 15px 35px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+    transition: all 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover, .purchase-btn:hover, .secondary-btn:hover {
+    background: linear-gradient(to bottom, #6b0f0f, var(--burgundy-red));
+    border-style: inset;
+    transform: translateY(2px);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.secondary-btn {
+    background: linear-gradient(to bottom, var(--brass-gold), #8b7500);
+    font-size: 1em;
+    padding: 10px 25px;
+}
+
+/* CTA Box */
+.cta-box {
+    text-align: center;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--aged-paper);
+    border: 4px double var(--brass-gold);
+}
+
+.delivery-note {
+    margin-top: 15px;
+    font-style: italic;
+    font-size: 0.9em;
+    color: var(--sepia-brown);
+}
+
+/* Catalogue Items */
+.catalogue-item {
+    background-color: var(--aged-paper);
+    border: 3px solid var(--sepia-brown);
+    padding: 25px;
+    margin: 25px auto;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+}
+
+.catalogue-item h3 {
+    color: var(--burgundy-red);
+    border-bottom: 2px solid var(--brass-gold);
+    padding-bottom: 10px;
+}
+
+.catalogue-item p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.catalogue-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.catalogue-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.catalogue-image {
+    flex: 0 0 auto;
+}
+
+.catalogue-image img {
+    width: 220px;
+    height: auto;
+    border: 8px solid var(--dark-wood);
+    border-style: ridge;
+    padding: 12px;
+    background: linear-gradient(to bottom, #f8f0e0, var(--aged-paper));
+    box-shadow: 
+        0 8px 20px rgba(0,0,0,0.4),
+        inset 0 2px 4px rgba(255,255,255,0.3);
+    border-radius: 4px;
+    filter: sepia(0.15) contrast(1.1);
+    transition: all 0.3s ease;
+}
+
+.catalogue-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 12px 30px rgba(0,0,0,0.5),
+        inset 0 2px 4px rgba(255,255,255,0.3);
+}
+
+/* Testimonials */
+.testimonial {
+    background-color: var(--aged-paper);
+    border-left: 5px solid var(--brass-gold);
+    padding: 20px;
+    margin: 25px auto;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.quote {
+    font-size: 1.2em;
+    font-style: italic;
+    color: var(--sepia-brown);
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.quote::before {
+    content: '"';
+    font-size: 2em;
+    color: var(--brass-gold);
+}
+
+.quote::after {
+    content: '"';
+    font-size: 2em;
+    color: var(--brass-gold);
+}
+
+.attribution {
+    text-align: right;
+    font-weight: bold;
+    color: var(--burgundy-red);
+    margin-top: 10px;
+}
+
+/* Forms */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid var(--sepia-brown);
+    background-color: var(--aged-paper);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#testimonial-form {
+    background-color: var(--aged-paper);
+    padding: 25px;
+    margin: 25px auto;
+    border: 3px double var(--brass-gold);
+}
+
+/* Message Box */
+.message-box {
+    background-color: rgba(184, 134, 11, 0.2);
+    border: 2px solid var(--brass-gold);
+    padding: 15px;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+/* Demonstration */
+.demonstration-box {
+    background-color: var(--aged-paper);
+    border: 4px double var(--burgundy-red);
+    padding: 30px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.demonstration-box p {
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+
+/* Custom Audio Player Styles */
+.custom-audio-player {
+    background: linear-gradient(to bottom, var(--aged-paper), var(--antique-parchment));
+    border: 4px solid var(--dark-wood);
+    border-style: ridge;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 550px;
+    box-shadow: 
+        0 10px 30px rgba(0,0,0,0.4),
+        inset 0 2px 5px rgba(184, 134, 11, 0.2);
+    border-radius: 10px;
+}
+
+.audio-info {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--brass-gold);
+}
+
+.audio-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--burgundy-red);
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.audio-artist {
+    font-size: 1.1em;
+    color: var(--sepia-brown);
+    font-style: italic;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     margin: 20px 0;
 }
 
-img {
-    border: 5px solid var(--primary-color);
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-audio {
-    margin: 0 0 10px 0; /* up right down left, son */
-}
-
-.facts p, .facts li, .facts ul{
-    background-color: var(--background-color);
-    background-image: var(--background-header-footer-texture);
-    font-size: 18px;
-    padding: 0.5rem 0 0.5rem 0;
-    list-style: none;
-}
-
-footer {
-    background-color: var(--primary-color);
-    padding: 10px;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    bottom: 0;
-    background-image: url('../img/dark-wood.png');
-    background-size: cover;
-    position: fixed;
-    width: 100%;
-}
-
-header, footer p{
-    color: #000;
-    font-weight: bold;
-}
-
-/* CROPPING ATTEMPT
-.cropped
-    object-fit: fill;
-    object-position: center;
-    clip-path: inset(px 50px 45px 36px); 
-*/
-/* top right bottom left */
-/* Turned out pretty well. Yipee (No. how do i border this? me no no, me monkey*/
-/* Didnt work man*/
-
-
-
-.price-display {
-    position: absolute;
-    background-color: var(--price-color);
-    top: 1vh;
-    left: -50px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #000;
-    padding: 8px 12px;
-    border-radius: 5px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
-    z-index: 10;
-    transform: rotate(-30deg);
-}
-
-.price-display p {
-    margin: 0;
-    color: white;
-    pointer-events: none;
-}
-
-.price-display:hover {
+.control-btn {
+    background: linear-gradient(to bottom, var(--brass-gold), #8b7506);
+    color: var(--dark-wood);
+    border: 3px solid var(--dark-wood);
+    border-style: outset;
+    padding: 12px 20px;
+    font-size: 1.2em;
     cursor: pointer;
-    animation: shake 0.5s ease-in-out;
+    border-radius: 8px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    font-weight: bold;
+    min-width: 55px;
 }
 
-@keyframes shake {
-    0% { transform: scale(1) rotate(-20deg); filter: brightness(1); }
-    25% { transform: scale(1.1) rotate(-22deg); filter: brightness(1.2); }
-    50% { transform: scale(1.15) rotate(-18deg); filter: brightness(1.3); }
-    75% { transform: scale(1.1) rotate(-22deg); filter: brightness(1.2); }
-    100% { transform: scale(1) rotate(-20deg); filter: brightness(1); }
+.control-btn:hover {
+    background: linear-gradient(to bottom, #d4a92e, var(--brass-gold));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
-.text-block {
-    background-color: var(--background-color);
-    background-image: var(--background-header-footer-texture);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
+.control-btn:active {
+    border-style: inset;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3) inset;
+}
+
+.play-btn {
+    background: linear-gradient(to bottom, var(--burgundy-red), #6b1414);
+    color: var(--aged-paper);
+    font-size: 1.5em;
+    padding: 12px 25px;
+}
+
+.play-btn:hover {
+    background: linear-gradient(to bottom, #a82020, var(--burgundy-red));
+}
+
+.progress-container {
+    margin: 20px 0;
+}
+
+.time-display {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    color: var(--sepia-brown);
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    
+    border: 2px solid var(--sepia-brown);
     border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
 }
 
-figure {
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, var(--brass-gold), #d4a92e);
+    border-radius: 8px;
+    width: 0%;
+    transition: width 0.1s linear;
+    box-shadow: 0 0 10px rgba(184, 134, 11, 0.5);
+}
+
+.progress-handle {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    background: radial-gradient(circle, var(--aged-paper), var(--brass-gold));
+    border: 2px solid var(--dark-wood);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(184, 134, 11, 0.8);
+    transition: left 0.1s linear;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: rgba(61, 40, 23, 0.1);
+    border-radius: 8px;
+    border: 2px solid var(--sepia-brown);
+}
+
+.volume-control label {
+    font-weight: bold;
+    color: var(--sepia-brown);
+    font-size: 1em;
+}
+
+#volume-slider {
+    flex: 1;
+    height: 8px;
+    background: linear-gradient(to right, var(--dark-wood), var(--brass-gold));
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: radial-gradient(circle, var(--aged-paper), var(--burgundy-red));
+    border: 2px solid var(--dark-wood);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+#volume-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: radial-gradient(circle, var(--aged-paper), var(--burgundy-red));
+    border: 2px solid var(--dark-wood);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+#volume-display {
+    min-width: 40px;
+    font-weight: bold;
+    color: var(--burgundy-red);
+    font-size: 1em;
+}
+/* LES GET FUNKY   https://css-tricks.com/lets-create-a-custom-audio-player/  */
+/* hey so this fuckihn sucked im just gonna use likea premade one from online and cite it  */
+
+.instruction-box {
+    background-color: var(--aged-paper);
+    border: 3px solid var(--sepia-brown);
+    padding: 25px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.instruction-box ol {
+    padding-left: 25px;
     margin-top: 15px;
 }
 
-figcaption {
-    font-size: 14px;
-    color: #000;
-    margin-top: 8px;
+.instruction-box li {
+    margin: 15px 0;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Footer - Victorian Style */
+footer {
+    background: linear-gradient(to bottom, #3d2817, #1a1108);
+    border-top: 5px double var(--brass-gold);
+    color: var(--aged-paper);
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 50px;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.5);
+}
+
+.footer-content p {
+    margin: 8px 0;
+    font-size: 1em;
+}
+
+.footer-content hr {
+    border: 1px solid var(--brass-gold);
+    margin: 15px auto;
+    width: 50%;
+}
+
+.copyright {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.motto {
+    font-size: 1.1em;
     font-weight: bold;
+    color: var(--brass-gold);
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    .price-tag {
+        position: static;
+        transform: none;
+        margin: 20px auto;
+        display: inline-block;
+    }
+    
+    nav a {
+        display: block;
+        padding: 10px;
+    }
+    
+    .product-showcase img {
+        width: 100%;
+    }
+}
+
+/* Telegraph us section because I forgot abpout it oh my god*/
+
+#contact {
+    background-color: var(--aged-paper);
+    border: 3px double var(--brass-gold);
+    padding: 30px;
+    margin: 30px auto;
+}
+
+#contact p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/*  Citing Sources (because they asked me to) Section */
+.citing-sources {
+    font-size: 0.9em;
+    color: var(--sepia-brown);
+    margin-top: 20px;
+}
+
+.citing-sources ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.citing-sources li {
+    margin: 8px 0;
+}
+
+.citing-sources a {
+    color: var(--burgundy-red);
+    text-decoration: underline;
+}
+
+.citing-sources a:hover {
+    color: var(--brass-gold);
+    text-decoration: none;
 }
