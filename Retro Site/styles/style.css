@@ -16,12 +16,16 @@
 and it kind of takes me out. Damn dude*/
 
 * {
-    filter: sepia(20%); /* wow how drunk was I to break down at this site yesterday dude*/
+    filter: sepia(15%); /* wow how drunk was I to break down at this site yesterday dude*/
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
+/*
+iframe { /*AI HELPED HERE and it still dont work
+    filter: none !important; /* turned off the sepia for iframes like videos and stuff 
+}
+*/
 body {
     font-family: 'Times New Roman', Times, serif;
     background-color: var(--antique-parchment);
@@ -381,6 +385,7 @@ input[type="text"], textarea {
 
 textarea {
     resize: vertical;
+    min-height: 100px; /* praise be it no longer clips*/
 }
 
 #testimonial-form {
@@ -723,7 +728,7 @@ im taking breaks from playing skyward sword to work on this. all I do is work*/
     padding: 10px;
     background-color: white;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    filter:none; /* I turned off the sepia for the video bc it looked gross*/
+    filter:none; /* I turned off the sepia for the video but idk if its working */
 }
 
 .video-description {
@@ -744,4 +749,72 @@ im taking breaks from playing skyward sword to work on this. all I do is work*/
     margin: 15px 0;
     font-size: 1.1em;
     line-height: 1.8;
+}
+
+/* Corporate Info Section */
+#corpo-info {
+    background-color: var(--aged-paper);
+    border: 3px double var(--brass-gold);
+    padding: 30px;
+    margin: 30px auto;
+}
+
+#corpo-info h2 {
+    color: var(--burgundy-red);
+    border-bottom: 2px solid var(--brass-gold);
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+#corpo-info p {
+    font-size: 1.1em;
+    margin: 15px 0;
+    text-align: justify;
+}
+
+#corpo-info .history-box{
+    background-color: rgba(61, 40, 23, 0.1);
+    border: 2px solid var(--sepia-brown);
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);}
+/* okay im done for real now*/
+
+/* I lied*/
+.two-columns {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.founders ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 0;
+}
+
+.founders li {
+    text-align: center;
+    flex: 1;
+    max-width: 200px;
+}
+
+.founders img {
+    width: 100%;
+    height: auto;
+    max-width: 180px;
+    border: 3px solid var(--brass-gold);
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.founders p {
+    font-weight: bold;
+    color: var(--sepia-brown);
+    margin-top: 10px;
 }

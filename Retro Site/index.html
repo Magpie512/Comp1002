@@ -1,4 +1,18 @@
 <!-- Rewrote because I really wanna one up Josh. His poster gave me a complex-->
+
+<!-- another rewrite to add the uh
+ 
+Promotion details (Why is this such a great deal?) DONE?
+About the product/service (What makes this thing so great?) DONE?
+Rate or add comments or feedback about the product/service DONE
+Support (How do I get help if I need it?) DONE?\
+
+im afctually done most of these
+
+Corporate information (Who is the company behind all this?)
+maybe a star rating to the testimonials page
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,11 +47,12 @@
     <!-- showSection function displays the selected section and hides others -->
     <!-- return false prevents the default link behavior -->
     <nav>
-        <a href="#" onclick="showSection('home'); return false;">Home</a> |
+        <a href="#" onclick="showSection('home'); return false;"></a> |
         <a href="#" onclick="showSection('catalogue'); return false;">Catalogue</a> |
         <a href="#" onclick="showSection('testimonials'); return false;">Testimonials</a> |
         <a href="#" onclick="showSection('demonstration'); return false;">Demonstration</a> |
-        <a href="#" onclick="showSection('contact'); return false;">Telegraph Us</a>
+        <a href="#" onclick="showSection('contact'); return false;">Telegraph Us</a> |
+        <a href="#" onclick="showSection('corpo-info'); return false;">The Edison-Bell Company</a>
     </nav>
     <main>
 
@@ -248,8 +263,47 @@
                     <button type="submit">Send Telegraph</button>
                 </form>
             </div>
-    </main>
+        </section>
 
+        <!-- Corporate Informatio Section -->
+         <!-- https://en.wikipedia.org/wiki/Edison_Bell-->
+         <section id="corpo-info" class="content-section" style="display:none;">
+            <!-- Real history here (because im bored)-->
+            <h2>The Edison Edison-Bell Company and Our History</h2>
+            <p>Below is a brief overview of the company's rich heritage and contributions to the world of sound recording.</p>
+            <div class="history-box">
+                <p>The Edison-Bell Company, established in the late 19th century, was a pioneering force in the realm
+                    of sound recording and reproduction. Founded by a consortium of visionary entrepreneurs, the
+                    company sought to bring the marvels of Thomas Edison's phonograph to the masses.</p>
+                <p>Throughout its illustrious history, Edison-Bell has been at the forefront of technological
+                    innovation, introducing groundbreaking advancements in recording media, playback mechanisms, and
+                    acoustic engineering. The company's commitment to excellence has earned it a distinguished
+                    reputation among audiophiles and music enthusiasts alike.</p>
+                <p>Today, the Edison-Bell Talking Machine Emporium continues this proud legacy, offering a curated
+                    selection of the finest gramophones and records available. Our dedication to quality craftsmanship
+                    and customer satisfaction remains unwavering as we strive to preserve the rich heritage of sound
+                    recording for future generations.</p>
+                <section class="two-columns">
+                    <div class="founders">
+                        <h3>Founders of Edison-Bell</h3>
+                        <ul>
+                            <li>
+                                <!--https://commons.wikimedia.org/wiki/Alexander_Graham_Bell-->
+                                <img src="img/Alexander_Graham_Bell.jpg" alt="Alexander Graham Bell" width="100">
+                                <p>Alexander Graham Bell</p>
+                            </li>
+                            <li>
+                                <!--https://en.wikipedia.org/wiki/Thomas_Edison-->
+                                <img src="img/Thomas_Edison2.jpg" alt="Thomas Edison" width="100">
+                                <p>Thomas Edison</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
         <div class="footer-content">

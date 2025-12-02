@@ -1,5 +1,7 @@
 // Oh captain, my captain. I discovered how to hide elements not as <detail> but as <div> with JS. Very cool!
 // Global variables for state tracking
+
+//Oh no I did comment. just not well.
 var currentSection = 'home';
 
 // Function to show different sections - simple DOM manipulation
@@ -20,6 +22,8 @@ function showSection(sectionName) {
 
 // Purchase inquiry handler
 function handlePurchaseInquiry() {
+    // I am going to be very verbose and old-timey here. Please Enjoy because sober me will.
+    //Trust me I do enjoy this. "Verbose" you can tell i just got the wordle done
     var customerName = prompt('Good Sir or Madam, may I have your esteemed name?', '');
     
     if (customerName && customerName !== '') {
@@ -30,15 +34,6 @@ function handlePurchaseInquiry() {
         confirmation += 'Delivery: 2-3 weeks by horse-drawn carriage';
         
         alert(confirmation);
-        
-        // Animate the gramophone image
-        var img = document.getElementById('gramophone-img');
-        if (img) {
-            img.style.transform = 'scale(1.1) rotate(2deg)';
-            setTimeout(function() {
-                img.style.transform = 'scale(1) rotate(0deg)';
-            }, 300);
-        }
     } else {
         alert('We shall await your return when you are prepared to provide your name, dear patron.');
     }
@@ -79,6 +74,10 @@ function togglePlay() {
     var audio = document.getElementById('audio-player');
     var playIcon = document.getElementById('play-icon');
     
+    //Gah why not use unicode characters for play/pause
+    // my eyes hurt. but the chipits cookie from pizzahut is good. yippers  
+
+    //unfdortunately this will make a color discrepancy but i cant find a unicode for rewimnd so meh
     if (audio) {
         if (isPlaying) {
             audio.pause();
@@ -223,16 +222,19 @@ function submitTestimonial() {
         return;
     }
     
-    // Create new testimonial element
+    // Create a new testimonial element
     testimonialCounter++;
     var newTestimonialHTML = '<div class="testimonial" style="animation: fadeIn 0.5s ease-in;">';
     newTestimonialHTML += '<p class="quote">' + text + '</p>';
     newTestimonialHTML += '<p class="attribution">— ' + name + '</p>';
     newTestimonialHTML += '</div>';
     
-    var container = document.getElementById('new-testimonials');
-    if (container) {
-        container.innerHTML += newTestimonialHTML;
+    // Insert before the button instead of in separate container
+    var addButton = document.querySelector('#testimonials .secondary-btn');
+    if (addButton) {
+        addButton.insertAdjacentHTML('beforebegin', newTestimonialHTML);
+        // Hide the button after first testimonial
+        addButton.style.display = 'none';
     }
     
     // Clear form
@@ -249,13 +251,8 @@ function submitTestimonial() {
 }
 
 // Simple animation for gramophone image on page load
+// I dont even think this works anymore wtf was I doin with it
 window.onload = function() {
-    // Add subtle animation effect
-    var img = document.getElementById('gramophone-img');
-    if (img) {
-        img.style.transition = 'transform 0.3s ease-in-out';
-    }
-    
     // Display welcome message
     setTimeout(function() {
         console.log('Welcome to the Edison-Bell Talking Machine Emporium!');
@@ -263,11 +260,4 @@ window.onload = function() {
     }, 500);
 };
 
-// Rudimentary hover effect for images using inline event handlers
-function enlargeImage(element) {
-    element.style.transform = 'scale(1.05)';
-}
 
-function shrinkImage(element) {
-    element.style.transform = 'scale(1)';
-}
