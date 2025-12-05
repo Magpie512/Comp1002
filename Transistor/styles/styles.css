@@ -171,6 +171,7 @@ footer {
     gap: 1rem;
     width: 100%;
     margin: 0 auto;
+    position: relative;
 }
 
 .gallery-container {
@@ -178,6 +179,7 @@ footer {
     flex-direction: column;
     align-items: center;
     max-width: 600px;
+    position: relative;
 }
 
 .gallery-btn {
@@ -215,6 +217,68 @@ footer {
     font-style: italic;
     color: var(--TRACE_GOLD);
     text-align: center;
+}
+
+/* For Sale Banner */
+.for-sale-banner {
+    position: absolute;
+    top: 10px;
+    right: 80px;
+    background: linear-gradient(135deg, var(--LED_RED) 0%, #c02030 100%);
+    border: 2px solid var(--TRACE_GOLD);
+    padding: 0.6rem 1.2rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.sale-sign {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--SILKSCREEN_WHITE);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sale-subtitle {
+    font-size: 0.75rem;
+    color: var(--TRACE_GOLD);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    margin-top: 0.15rem;
+    font-style: italic;
+    letter-spacing: 0.08rem;
+}
+
+/* Buy Now Button */
+.buy-now-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--TRACE_GOLD) 0%, var(--COPPER_ORANGE) 100%);
+    color: var(--CHIP_BLACK);
+    border: 5px solid var(--CONTACT_SILVER);
+    border-radius: 8px;
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--BOX_SHADOW);
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+.buy-now-btn:hover {
+    background: linear-gradient(135deg, var(--COPPER_ORANGE) 0%, var(--TRACE_GOLD) 100%);
+    transform: scale(1.05);
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.9);
+    border-color: var(--TRACE_GOLD);
+}
+
+.buy-now-btn:active {
+    transform: scale(0.98);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.7);
 }
 
 /* Demo */
@@ -469,4 +533,25 @@ footer {
 .submit-review-btn:active {
     transform: scale(0.98);
     box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.7);
+}
+
+/* Scales */
+
+@media (max-width: 900px) {
+    .content-section {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .demonstration-image {
+        max-width: 100%;
+    }
+
+    .selector-for-products {
+        flex-direction: column;
+    }
+
+    .product-container {
+        max-width: 100%;
+    }
 }

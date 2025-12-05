@@ -19,32 +19,37 @@
             <p class="tagline"> From Bell Labs</p>
         </section>
         <nav>
-                <a href="#" onclick="showSection('product_showcase'); return false;">Showcase</a>
-                <a href="#" onclick="showSection('similar'); return false;">Similar Products</a>
-                <a href="#" onclick="showSection('applications'); return false;">Applications </a>
+            <a href="#" onclick="showSection('product_showcase'); return false;">Showcase</a>
+            <a href="#" onclick="showSection('similar'); return false;">Similar Products</a>
+            <a href="#" onclick="showSection('applications'); return false;">Applications </a>
 
 
-                <a href="#" onclick="showSection('demonstration'); return false;">How It Works</a>
-                <a href="#" onclick="showSection('reviews'); return false;">Reviews</a>
-                <a href="#" onclick="showSection('contact'); return false;">Contact Us</a>
-                <a href="#" onclick="showSection('corporate_info'); return false;">Bell Labs</a>
+            <a href="#" onclick="showSection('demonstration'); return false;">How It Works</a>
+            <a href="#" onclick="showSection('reviews'); return false;">Reviews</a>
+            <a href="#" onclick="showSection('contact'); return false;">Contact Us</a>
+            <a href="#" onclick="showSection('corporate_info'); return false;">Bell Labs</a>
         </nav>
     </header>
 
     <main>
-        <section id="product_showcase" class="content-section">
+        <section id="product_showcase" class="content-section" style="display: block;">
             <h2>Product Showcase</h2>
+
             <div class="showcase-content"></div>
             <p>Discover the revolutionary transistor, a groundbreaking invention from Bell Laboratories that has
                 transformed the world of electronics. This remarkable device amplifies and switches electronic signals,
                 opening new possibilities in communication, computing, and beyond.</p>
             </div>
             <figure class="image-gallery">
+                <div class="for-sale-banner">
+                    <div class="sale-sign">FOR SALE</div>
+                    <div class="sale-subtitle">Corporate Use Only</div>
+                </div>
                 <button class="gallery-btn prev-btn" onclick="changeImage(-1)">❮</button>
                 <div class="gallery-container">
                     <img id="gallery-image" src="img/transistor-physicists-John-Bardeen-American-William-B.jpg"
-                        alt="Transistor inventors at Bell Labs demonstrating the device" class="content-image"> 
-            <!-- https://www.britannica.com/technology/transistor/Innovation-at-Bell-Labs -->
+                        alt="Transistor inventors at Bell Labs demonstrating the device" class="content-image">
+                    <!-- https://www.britannica.com/technology/transistor/Innovation-at-Bell-Labs -->
                     <figcaption id="gallery-caption">The transistor team at Bell Laboratories</figcaption>
                 </div>
                 <button class="gallery-btn next-btn" onclick="changeImage(1)">❯</button>
@@ -58,24 +63,32 @@
                     <li>Fast switching capabilities</li>
                 </ul>
             </div>
+
+            <button class="buy-now-btn">BUY NOW</button>
         </section>
 
         <!-- Similar Products -->
         <section id="similar" class="content-section" style="display:none;">
             <h2>Similar Products</h2>
             <p>Explore other groundbreaking inventions from Bell Labs that have shaped the electronics industry:</p>
-            
+
             <div class="selector-for-products">
                 <button class="gallery-btn prev-btn" onclick="changeSimilarProduct(-1)">❮</button>
                 <div class="product-container">
                     <div id="similar-product-display" class="similar-product-display">
-                        <h3 id="product-title">Diodes (Rectifiers)</h3>
-                        <p id="product-description">Semiconductor devices that allow current to flow in one direction, essential for converting AC to DC power and signal processing.</p>
+                        <h3 id="product-title">Electret Microphone</h3>
+                        <p id="product-description">An electret microphone is a type of condenser microphone that uses a
+                            permanently charged material to convert sound waves into electrical signals.</p>
+                        <figure>
+                            <img id="product-image" src="img/Electret_condenser_microphone_capsules.jpg"
+                                alt="An early microphone" class="similar-product-image">
+                            <!-- https://en.wikipedia.org/wiki/Electret_microphone#/media/File:Electret_condenser_microphone_capsules.jpg-->
+                            <figcaption id="product-caption">Internal structure of an electret microphone</figcaption>
+                        </figure>
                         <ul id="product-features">
-                            <li>One-way current flow</li>
-                            <li>Voltage regulation</li>
-                            <li>Signal detection and mixing</li>
-                            <li>Protection against reverse polarity</li>
+                            <li>Compact and Low Cost</li>
+                            <li>Clear Audio Capture</li>
+                            <li>No Need for External Power</li>
                         </ul>
                     </div>
                 </div>
@@ -87,22 +100,142 @@
         <section id="applications" class="content-section" style="display:none;">
             <h2>Applications</h2>
             <p>The transistor is widely used in various applications, from radios and televisions to computers and
-                mobile devices, revolutionizing the way we communicate and process information.</p>
+            mobile devices, revolutionizing the way we communicate and process information.</p>
+            
+            <div class="features">
+            <h3>Communication Devices</h3>
+            <ul>
+                <li>Radio receivers and transmitters</li>
+                <li>Telephone switching systems</li>
+                <li>Television broadcasting equipment</li>
+                <li>Signal amplification circuits</li>
+            </ul>
+            </div>
+
+            <div class="features">
+            <h3>Computing Systems</h3>
+            <ul>
+                <li>Digital logic gates and processors</li>
+                <li>Memory storage devices</li>
+                <li>Integrated circuits and microchips</li>
+                <li>High-speed data processing</li>
+            </ul>
+            </div>
+
+            <div class="features">
+            <h3>Consumer Electronics</h3>
+            <ul>
+                <li>Portable radios and audio equipment</li>
+                <li>Hearing aids and medical devices</li>
+                <li>Control systems and automation</li>
+                <li>Power regulation circuits</li>
+            </ul>
+            </div>
+
+            <div class="features">
+            <h3>Industrial Applications</h3>
+            <ul>
+                <li>Motor control systems</li>
+                <li>Sensor signal processing</li>
+                <li>Power conversion and regulation</li>
+                <li>Instrumentation and measurement devices</li>
+            </ul>
+            </div>
         </section>
 
         <!-- Demonstration -->
         <section id="demonstration" class="content-section" style="display:none;">
             <h2>How It Works</h2>
-            <p>The transistor operates by using semiconductor materials to control the flow of electrical current. It
-                consists of three layers: the emitter, base, and collector, which work together to amplify or switch
-                signals.</p>
+            <p>The transistor is a semiconductor device that revolutionized electronics by controlling electrical
+                current flow through three distinct layers of material.</p>
+
+            <figure class="demonstration-image">
+                <img src="img/pickard.gif" alt="NPN Transistor Structure">
+                <!-- https://memorial.bellsystem.com/belllabs_transistor1.html -->
+            </figure>
+
+            <div class="features">
+                <h3>Core Components</h3>
+                <ul>
+                    <li><strong>Emitter:</strong> Provides charge carriers (electrons or holes) to the system</li>
+                    <li><strong>Base:</strong> Controls the flow of carriers between emitter and collector</li>
+                    <li><strong>Collector:</strong> Receives charge carriers and produces the output signal</li>
+                </ul>
+            </div>
+
+            <div class="features">
+                <h3>Operating Principles</h3>
+                <ul>
+                    <li><strong>Amplification:</strong> A small current at the base controls a larger current between
+                        emitter and collector</li>
+                    <li><strong>Switching:</strong> By changing the base voltage, the transistor can rapidly turn
+                        current flow on or off</li>
+                    <li><strong>Semiconductor Action:</strong> Uses materials like silicon or germanium with carefully
+                        controlled impurities</li>
+                </ul>
+            </div>
+
+            <p>This elegant three-layer design allows the transistor to perform two critical functions: amplifying weak
+                signals to make them stronger, and acting as an electronic switch that can be toggled millions of times
+                per second. These capabilities form the foundation of all modern digital electronics.</p>
         </section>
 
         <!-- Reviews -->
         <section id="reviews" class="content-section" style="display:none;">
-            <h2>Reviews</h2>
-            <p>"The invention of the transistor has been a game-changer in the field of electronics. Its impact is
-                immeasurable." - Tech Innovators Magazine</p>
+            <h2>Customer Reviews</h2>
+            <p>See what industry experts and engineers are saying about the transistor:</p>
+            
+            <div class="reviews-container" id="reviews-container">
+            <div class="review-card">
+                <div class="review-header">
+                <h4>Tech Innovators Magazine</h4>
+                <div class="rating">★★★★★</div>
+                </div>
+                <p class="review-text">"The invention of the transistor has been a game-changer in the field of electronics. Its impact is immeasurable."</p>
+                <p class="review-date">December 1947</p>
+            </div>
+            
+            <div class="review-card">
+                <div class="review-header">
+                <h4>Dr. Robert Electronics</h4>
+                <div class="rating">★★★★★</div>
+                </div>
+                <p class="review-text">"A remarkable achievement in solid-state physics. This device will revolutionize computing and telecommunications."</p>
+                <p class="review-date">January 1948</p>
+            </div>
+            
+            <div class="review-card">
+                <div class="review-header">
+                <h4>Engineering Weekly</h4>
+                <div class="rating">★★★★☆</div>
+                </div>
+                <p class="review-text">"Compact, efficient, and reliable. The transistor's low power consumption makes it ideal for portable devices."</p>
+                <p class="review-date">March 1948</p>
+            </div>
+            </div>
+
+            <div class="add-review-section">
+            <h3>Share Your Thoughts</h3>
+            <form id="review-form" onsubmit="addReview(event)">
+                <input type="text" id="reviewer-name" placeholder="Your Name or Organization" required>
+                
+                <div class="rating-input">
+                <label>Rating:</label>
+                <select id="rating-select" required>
+                    <option value="">Select Rating</option>
+                    <option value="5">★★★★★ (5 stars)</option>
+                    <option value="4">★★★★☆ (4 stars)</option>
+                    <option value="3">★★★☆☆ (3 stars)</option>
+                    <option value="2">★★☆☆☆ (2 stars)</option>
+                    <option value="1">★☆☆☆☆ (1 star)</option>
+                </select>
+                </div>
+                
+                <textarea id="review-text" placeholder="Write your review here..." rows="4" required></textarea>
+                
+                <button type="submit" class="submit-review-btn">Submit Review</button>
+            </form>
+            </div>
         </section>
 
         <!-- Contact Information -->
@@ -116,8 +249,26 @@
 
         <!-- Corporate Information -->
         <section id="corporate_info" class="content-section" style="display:none;">
-           
-            
+            <h2>About Bell Labs</h2>
+            <p>Bell Telephone Laboratories, commonly known as Bell Labs, is one of the most prestigious research and
+                development facilities in history. Founded in 1925, it has been the birthplace of numerous
+                groundbreaking innovations that have shaped modern technology.</p>
+
+            <div class="features">
+                <h3>Notable Achievements</h3>
+                <ul>
+                    <li>Invention of the transistor (1947)</li>
+                    <li>Development of information theory</li>
+                    <li>Creation of the Unix operating system</li>
+                    <li>Discovery of cosmic microwave background radiation</li>
+                    <li>Development of the laser and fiber optics</li>
+                </ul>
+            </div>
+
+            <p>Our team of brilliant scientists and engineers has been awarded multiple Nobel Prizes for their
+                contributions to physics and chemistry. Bell Labs continues to be at the forefront of innovation,
+                driving advances in communications, computing, and materials science.</p>
+
         </section>
 
     </main>
