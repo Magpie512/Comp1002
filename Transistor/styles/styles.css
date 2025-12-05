@@ -108,6 +108,9 @@ body {
     border: 4px solid var(--TRACE_GOLD);
 }
 
+/* Similar Products Section */
+
+
 /* Contact Section*/
 
 .contact-info {
@@ -146,7 +149,7 @@ footer {
     justify-content: center;
     gap: 1rem;
     width: 100%;
-    position: relative;
+    margin: 0 auto;
 }
 
 .gallery-container {
@@ -252,4 +255,15 @@ footer {
     font-weight: bold;
     position: absolute;
     left: 0;
+}
+
+.similar-product-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border: 4px solid var(--TRACE_GOLD);
+    box-shadow: var(--BOX_SHADOW);
+    margin: 1rem auto;
+    display: block;
 }

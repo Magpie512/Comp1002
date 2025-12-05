@@ -25,12 +25,12 @@ var galleryImages = [
     {
         src: 'img/transistor-physicists-John-Bardeen-American-William-B.jpg',
         alt: 'Transistor inventors at Bell Labs demonstrating the device',
-        caption: 'The transistor team at Bell Laboratories'
+        caption: 'The first point contact transistor'
     },
-    {
-        src: 'img/—Pngtree—circuit board_1377943.png',
-        alt: 'Circuit board with transistor components',
-        caption: 'Modern circuit board technology'
+    { 
+        src: 'img/transistor.jpg',
+        alt: 'Close-up of a transistor component',
+        caption: 'Another Angle of the transistor'
     }
 ];
 
@@ -60,43 +60,25 @@ function changeImage(direction) {
 // Similar products data and functionality
 var similarProducts = [
     {
-        title: 'Diodes (Rectifiers)',
-        description: 'Semiconductor devices that allow current to flow in one direction, essential for converting AC to DC power and signal processing.',
+        title: 'Electret Microphone',
+        img: 'img/Electret_condenser_microphone_capsules.jpg',
+        alt: 'An early microphone',
+        description: 'An electret microphone is a type of condenser microphone that uses a permanently charged material to convert sound waves into electrical signals.',
         features: [
-            'One-way current flow',
-            'Voltage regulation',
-            'Signal detection and mixing',
-            'Protection against reverse polarity'
+            'Compact and Low Cost',
+            'Clear Audio Capture',
+            'No Need for External Power'
         ]
     },
     {
-        title: 'Integrated Circuits',
-        description: 'Revolutionary chips that combine multiple transistors and components on a single piece of silicon, enabling compact and complex electronic systems.',
+        title: 'Model V Relay Computer',
+        img: 'img/Bell_Relay_Computer.png',
+        alt: 'An early relay computer',
+        description: 'An early computer that utilized electromechanical relays for processing, showcasing the transition from mechanical to electronic computing.',
         features: [
-            'Miniaturized circuitry',
-            'High-speed processing',
-            'Reduced power consumption',
-            'Cost-effective mass production'
-        ]
-    },
-    {
-        title: 'Microprocessors',
-        description: 'The brain of modern computers, containing millions of transistors on a single chip to execute instructions and process data.',
-        features: [
-            'Central processing unit on a chip',
-            'Programmable logic',
-            'High computational speed',
-            'Versatile applications'
-        ]
-    },
-    {
-        title: 'Solid-State Memory',
-        description: 'Non-volatile storage using transistor-based technology to retain data without power, revolutionizing data storage and retrieval.',
-        features: [
-            'Fast read/write speeds',
-            'No moving parts',
-            'Low power consumption',
-            'Durable and reliable'
+            'Electromechanical switching',
+            'Floating-point arithmetic',
+            'Multi processing'
         ]
     }
 ];
@@ -118,10 +100,17 @@ function changeSimilarProduct(direction) {
     var titleElement = document.getElementById('product-title');
     var descElement = document.getElementById('product-description');
     var featuresElement = document.getElementById('product-features');
+    var imgElement = document.getElementById('product-image');
     
     if (titleElement && descElement && featuresElement) {
         titleElement.textContent = product.title;
         descElement.textContent = product.description;
+        
+        // Update image if it exists
+        if (imgElement && product.img) {
+            imgElement.src = product.img;
+            imgElement.alt = product.alt;
+        }
         
         // Clear and rebuild features list
         featuresElement.innerHTML = '';
