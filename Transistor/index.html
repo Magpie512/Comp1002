@@ -19,35 +19,37 @@
             <p class="tagline"> From Bell Labs</p>
         </section>
         <nav>
-            <section class="navassist">
-            <a href="#" onclick="showSection('product_showcase'); return false;">Showcase</a> 
-            <a href="#" onclick="showSection('similar'); return false;">Similar Products</a> 
-            <a href="#" onclick="showSection('applications'); return false;">Applications </a> 
-        </section>
-        <section class="navassist">
-            <a href="#" onclick="showSection('demonstration'); return false;">How It Works</a> 
-            <a href="#" onclick="showSection('reviews'); return false;">Reviews</a> 
-            <a href="#" onclick="showSection('contact'); return false;">Contact Us</a> 
-        </section>
-        <section class="navassist">
-            <a href="#" onclick="showSection('corporate_info'); return false;">Bell Labs</a>
-        </section>
+                <a href="#" onclick="showSection('product_showcase'); return false;">Showcase</a>
+                <a href="#" onclick="showSection('similar'); return false;">Similar Products</a>
+                <a href="#" onclick="showSection('applications'); return false;">Applications </a>
+
+
+                <a href="#" onclick="showSection('demonstration'); return false;">How It Works</a>
+                <a href="#" onclick="showSection('reviews'); return false;">Reviews</a>
+                <a href="#" onclick="showSection('contact'); return false;">Contact Us</a>
+                <a href="#" onclick="showSection('corporate_info'); return false;">Bell Labs</a>
         </nav>
     </header>
 
-<main>
-    <section id="product_showcase" class="content-section">
-        <h2>Product Showcase</h2>
-        <div class="showcase-content"></div>
-            <p>Discover the revolutionary transistor, a groundbreaking invention from Bell Laboratories that has transformed the world of electronics. This remarkable device amplifies and switches electronic signals, opening new possibilities in communication, computing, and beyond.</p>
-
-        </div>
-        <figure>
-            <img src="img/transistor-physicists-John-Bardeen-American-William-B.jpg" alt="Transistor inventors at Bell Labs demonstrating the device" class="content-image">
-            <figcaption>The transistor team at Bell Laboratories</figcaption>
-        </figure>
-        <!-- https://www.britannica.com/technology/transistor/Innovation-at-Bell-Labs -->
-         <div class="features">
+    <main>
+        <section id="product_showcase" class="content-section">
+            <h2>Product Showcase</h2>
+            <div class="showcase-content"></div>
+            <p>Discover the revolutionary transistor, a groundbreaking invention from Bell Laboratories that has
+                transformed the world of electronics. This remarkable device amplifies and switches electronic signals,
+                opening new possibilities in communication, computing, and beyond.</p>
+            </div>
+            <figure class="image-gallery">
+                <button class="gallery-btn prev-btn" onclick="changeImage(-1)">❮</button>
+                <div class="gallery-container">
+                    <img id="gallery-image" src="img/transistor-physicists-John-Bardeen-American-William-B.jpg"
+                        alt="Transistor inventors at Bell Labs demonstrating the device" class="content-image">
+                    <figcaption id="gallery-caption">The transistor team at Bell Laboratories</figcaption>
+                </div>
+                <button class="gallery-btn next-btn" onclick="changeImage(1)">❯</button>
+            </figure>
+            <!-- https://www.britannica.com/technology/transistor/Innovation-at-Bell-Labs -->
+            <div class="features">
                 <h3>Key Features</h3>
                 <ul>
                     <li>Compact solid-state design</li>
@@ -56,49 +58,72 @@
                     <li>Fast switching capabilities</li>
                 </ul>
             </div>
-    </section>
+        </section>
 
-    <!-- Similar Products -->
-    <section id="similar" class="content-section" style="display:none;">
-        <h2>Similar Products</h2>
-        <p>Explore other groundbreaking inventions from Bell Labs, including the integrated circuit and the laser, which have further advanced technology and innovation.</p>
-    </section>
+        <!-- Similar Products -->
+        <section id="similar" class="content-section" style="display:none;">
+            <h2>Similar Products</h2>
+            <p>Explore other groundbreaking inventions from Bell Labs that have shaped the electronics industry:</p>
+            
+            <div class="selector-for-products">
+                <button class="gallery-btn prev-btn" onclick="changeSimilarProduct(-1)">❮</button>
+                <div class="product-container">
+                    <div id="similar-product-display" class="similar-product-display">
+                        <h3 id="product-title">Diodes (Rectifiers)</h3>
+                        <p id="product-description">Semiconductor devices that allow current to flow in one direction, essential for converting AC to DC power and signal processing.</p>
+                        <ul id="product-features">
+                            <li>One-way current flow</li>
+                            <li>Voltage regulation</li>
+                            <li>Signal detection and mixing</li>
+                            <li>Protection against reverse polarity</li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="gallery-btn next-btn" onclick="changeSimilarProduct(1)">❯</button>
+            </div>
+        </section>
 
-    <!-- Applications -->
-    <section id="applications" class="content-section" style="display:none;">
-        <h2>Applications</h2>
-        <p>The transistor is widely used in various applications, from radios and televisions to computers and mobile devices, revolutionizing the way we communicate and process information.</p>
-    </section>
-    
-    <!-- Demonstration -->
-    <section id="demonstration" class="content-section" style="display:none;">
-        <h2>How It Works</h2>
-        <p>The transistor operates by using semiconductor materials to control the flow of electrical current. It consists of three layers: the emitter, base, and collector, which work together to amplify or switch signals.</p>
-    </section>
+        <!-- Applications -->
+        <section id="applications" class="content-section" style="display:none;">
+            <h2>Applications</h2>
+            <p>The transistor is widely used in various applications, from radios and televisions to computers and
+                mobile devices, revolutionizing the way we communicate and process information.</p>
+        </section>
 
-    <!-- Reviews -->
-    <section id="reviews" class="content-section" style="display:none;">
-        <h2>Reviews</h2>
-        <p>"The invention of the transistor has been a game-changer in the field of electronics. Its impact is immeasurable." - Tech Innovators Magazine</p>
-    </section>
+        <!-- Demonstration -->
+        <section id="demonstration" class="content-section" style="display:none;">
+            <h2>How It Works</h2>
+            <p>The transistor operates by using semiconductor materials to control the flow of electrical current. It
+                consists of three layers: the emitter, base, and collector, which work together to amplify or switch
+                signals.</p>
+        </section>
 
-    <!-- Contact Information -->
-    <section id="contact" class="content-section" style="display:none;">
-        <h2>Contact Us</h2>
-        <p>For more information about the transistor and other Bell Labs innovations, please reach out to us at
-            <a href="mailto:info@belllabs.com">info@belllabs.com</a>.</p>
-    </section>
+        <!-- Reviews -->
+        <section id="reviews" class="content-section" style="display:none;">
+            <h2>Reviews</h2>
+            <p>"The invention of the transistor has been a game-changer in the field of electronics. Its impact is
+                immeasurable." - Tech Innovators Magazine</p>
+        </section>
 
-    <!-- Corporate Information -->
-    <section id="corporate_info" class="content-section" style="display:none;">
-        <h2>Bell Labs</h2>
-        <p>Bell Laboratories, founded in 1925, has been at the forefront of technological innovation, contributing to numerous advancements in telecommunications and electronics.</p>
-    </section>
+        <!-- Contact Information -->
+        <section id="contact" class="content-section" style="display:none;">
+            <h2>Contact Us</h2>
+            <p>For more information about the transistor and other Bell Labs innovations, please reach out to us at:</p>
+            <p class="mail">Mailing Address: Murray Hill, NJ 07974, USA</p>
+            <p class="phone">Phone: <a href="tel:+18005551234">+1 (800) 555-1234</a></p>
+
+        </section>
+
+        <!-- Corporate Information -->
+        <section id="corporate_info" class="content-section" style="display:none;">
+           
+            
+        </section>
 
     </main>
 
-<footer>
-    <p>© 1947 Bell Labs. All rights reserved.</p>
-</footer>
+    <footer>
+        <p>© 1947 Bell Labs. All rights reserved.</p>
+    </footer>
 
-</body> 
+</body>

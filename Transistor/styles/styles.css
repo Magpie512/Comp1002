@@ -5,20 +5,15 @@
     --AERO_BLUE: #6686de;
     --BOX_SHADOW: 6px 6px 0px rgba(0, 0, 0, 0.7);
     --OPAQUE_PCB_GREEN: rgba(20, 81, 20, 0.8);
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: 2px solid black;
-}
-
-.logo {
-    width: 30vw;
-    height: auto;
-    filter: drop-shadow(5px 5px 5px black);
-    display: block;
+    --SOLDER_MASK_GREEN: #0d8a0d;
+    --COPPER_ORANGE: #b87333;
+    --RESISTOR_BLACK: #1a1a1a;
+    --CAPACITOR_BLUE: #4a90e2;
+    --LED_RED: #e63946;
+    --CHIP_BLACK: #2b2b2b;
+    --SILKSCREEN_WHITE: #f0f0f0;
+    --CONNECTOR_GRAY: #5a5a5a;
+    --THERMAL_PAD_SILVER: #c0c0c0;
 }
 
 header {
@@ -28,13 +23,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
-    margin: 20px;
-    border: 4px solid var(--TRACE_GOLD);
+    padding: 0.5rem 0.8rem;
+    border: 3px solid var(--TRACE_GOLD);
 }
 
 header .logo {
-    width: 30vw;
+    width: 12vw;
     height: auto;
     filter: drop-shadow(var(--BOX_SHADOW));
     display: block;
@@ -42,17 +36,16 @@ header .logo {
 }
 
 header h1 {
-
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
     font-family: 'Courier New', Courier, monospace;
 }
 
 header .tagline {
-    font-size: 1.2rem;
+    font-size: 0.75rem;
     font-family: "Courier New", Courier, monospace;
     font-style: italic;
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
     color: var(--TRACE_GOLD);
     text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 0px;
     text-align: center;
@@ -64,18 +57,21 @@ header nav {
 
 header nav a {
     color: var(--CONTACT_SILVER);
-    font-size: 1.2rem;
-    margin-left: 1.5rem;
+    font-size: 0.95rem;
+    margin-left: 1rem;
     font-family: "Courier New", Courier, monospace;
     text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 0px;
     text-decoration: none;
 }
 
+/*
 .navassist {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+}*/
+
+
 
 body::before{
     content: "";
@@ -100,6 +96,7 @@ body {
 }
 
 .content-section {
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -107,8 +104,26 @@ body {
     background-color: var(--OPAQUE_PCB_GREEN);
     gap: 2rem;
     padding: 2rem;
-    margin: 20px;
+    margin: 20px auto;
     border: 4px solid var(--TRACE_GOLD);
+}
+
+/* Contact Section*/
+
+.contact-info {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.mail, .phone {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--TRACE_GOLD);
+}
+
+.phone a {
+    color: var(--TRACE_GOLD);
+    text-decoration: none;
 }
 
 /* Footer */
@@ -122,4 +137,119 @@ footer {
     margin: 20px;
     border: 4px solid var(--TRACE_GOLD);
     font-family: "Courier New", Courier, monospace;
+}
+
+/* Image Gallery Functionality */
+.image-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+}
+
+.gallery-btn {
+    background-color: var(--TRACE_GOLD);
+    color: var(--CHIP_BLACK);
+    border: 3px solid var(--CONTACT_SILVER);
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: var(--BOX_SHADOW);
+}
+
+.gallery-btn:hover {
+    background-color: var(--CONTACT_SILVER);
+    color: var(--TRACE_GOLD);
+    transform: scale(1.1);
+}
+
+.gallery-btn:active {
+    transform: scale(0.95);
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.7);
+}
+
+.content-image {
+    max-width: 100%;
+    height: auto;
+    border: 4px solid var(--TRACE_GOLD);
+    box-shadow: var(--BOX_SHADOW);
+}
+
+#gallery-caption {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--TRACE_GOLD);
+    text-align: center;
+}
+
+/* Similar Products Section */
+.selector-for-products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.product-container {
+    flex: 1;
+    max-width: 700px;
+    min-height: 300px;
+}
+
+.similar-product-display {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border: 3px solid var(--TRACE_GOLD);
+    border-radius: 8px;
+    box-shadow: var(--BOX_SHADOW);
+}
+
+#product-title {
+    color: var(--TRACE_GOLD);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#product-description {
+    color: var(--CONTACT_SILVER);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+#product-features {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#product-features li {
+    color: var(--SILKSCREEN_WHITE);
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1rem;
+}
+
+#product-features li::before {
+    content: "▸";
+    color: var(--TRACE_GOLD);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
