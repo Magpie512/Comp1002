@@ -62,6 +62,7 @@ var similarProducts = [
     {
         title: 'Electret Microphone',
         img: 'img/Electret_condenser_microphone_capsules.jpg',
+        // https://en.wikipedia.org/wiki/Electret_microphone //
         alt: 'An early microphone',
         description: 'An electret microphone is a type of condenser microphone that uses a permanently charged material to convert sound waves into electrical signals.',
         features: [
@@ -73,6 +74,7 @@ var similarProducts = [
     {
         title: 'Model V Relay Computer',
         img: 'img/Bell_Relay_Computer.png',
+        // https://en.wikipedia.org/wiki/Model_V //
         alt: 'An early relay computer',
         description: 'An early computer that utilized electromechanical relays for processing, showcasing the transition from mechanical to electronic computing.',
         features: [
@@ -120,4 +122,53 @@ function changeSimilarProduct(direction) {
             featuresElement.appendChild(li);
         });
     }
+}
+
+// Review form functionality
+function addReview(event) {
+    event.preventDefault();
+    
+    // Get form values
+    var reviewerName = document.getElementById('reviewer-name').value;
+    var rating = document.getElementById('rating-select').value;
+    var reviewText = document.getElementById('review-text').value;
+    
+    // Create star rating string
+    var starRating = '';
+    for (var i = 1; i <= 5; i++) {
+        starRating += i <= rating ? '★' : '☆';
+    }
+    
+    // Get current date
+    var currentDate = new Date();
+    var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                      'July', 'August', 'September', 'October', 'November', 'December'];
+    var dateString = monthNames[currentDate.getMonth()] + ' ' + currentDate.getFullYear();
+    
+    // Create new review card
+    var reviewCard = document.createElement('div');
+    reviewCard.className = 'review-card';
+    reviewCard.innerHTML = 
+        '<div class="review-header">' +
+        '<h4>' + reviewerName + '</h4>' +
+        '<div class="rating">' + starRating + '</div>' +
+        '</div>' +
+        '<p class="review-text">"' + reviewText + '"</p>' +
+        '<p class="review-date">' + dateString + '</p>';
+    
+    // Add to reviews container
+    var reviewsContainer = document.getElementById('reviews-container');
+    reviewsContainer.appendChild(reviewCard);
+    
+    // Reset form
+    document.getElementById('review-form').reset();
+    
+    // Hide the form section
+    var formSection = document.querySelector('.add-review-section');
+    if (formSection) {
+        formSection.style.display = 'none';
+    }
+    
+    // Scroll to new review
+    reviewCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
