@@ -11,5 +11,6 @@
 ## Themed Websites
 - [Pizza Website](https://magpie512.github.io/Comp1002/pizzawebsite/index.html)
 - [Poster Website](https://magpie512.github.io/Comp1002/posterAssignment/index.html)
+### My Two Attempts for Project 1
 - [Retro Site](https://magpie512.github.io/Comp1002/Retro%20Site/index.html)
-- [Transistor Site](https://magpie512.github.io/Comp1002/Transistor/index.html)
+- [Transistor Site (Prefered one to mark)](https://magpie512.github.io/Comp1002/Transistor/index.html)
