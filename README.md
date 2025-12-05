@@ -12,3 +12,4 @@
 - [Pizza Website](https://magpie512.github.io/Comp1002/pizzawebsite/index.html)
 - [Poster Website](https://magpie512.github.io/Comp1002/posterAssignment/index.html)
 - [Retro Site](https://magpie512.github.io/Comp1002/Retro%20Site/index.html)
+- [Transistor Site](https://magpie512.github.io/Comp1002/Transistor/index.html)
