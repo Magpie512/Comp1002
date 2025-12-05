@@ -1,9 +1,10 @@
 :root {
     --PCB_GREEN: #145114;
-    --CONTACT_SILVER: #bbbbbb;
+    --CONTACT_SILVER: #888888;
     --TRACE_GOLD: #d4af37;
     --AERO_BLUE: #6686de;
-
+    --BOX_SHADOW: 6px 6px 0px rgba(0, 0, 0, 0.7);
+    --OPAQUE_PCB_GREEN: rgba(20, 81, 20, 0.8);
 }
 
 *{
@@ -21,22 +22,23 @@
 }
 
 header {
-    background-color: var(--PCB_GREEN);
+    background-color: var(--OPAQUE_PCB_GREEN);
     color: var(--CONTACT_SILVER);
-    padding: 1rem;
-    margin: 20px;
-    filter: drop-shadow(5px 5px 5px black);
+    box-shadow: var(--BOX_SHADOW);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1.5rem;
+    margin: 20px;
+    border: 4px solid var(--TRACE_GOLD);
 }
 
 header .logo {
-    text-align: left;
-}
-
-header nav {
-    text-align: right;
+    width: 30vw;
+    height: auto;
+    filter: drop-shadow(var(--BOX_SHADOW));
+    display: block;
+    image-rendering: pixelated;
 }
 
 header h1 {
@@ -48,7 +50,76 @@ header h1 {
 
 header .tagline {
     font-size: 1.2rem;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-style: italic;
     margin-bottom: 1rem;
+    color: var(--TRACE_GOLD);
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 0px;
+    text-align: center;
+}
+
+header nav {
+    text-align: right;
+}
+
+header nav a {
+    color: var(--CONTACT_SILVER);
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    font-family: "Courier New", Courier, monospace;
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 0px;
+    text-decoration: none;
+}
+
+.navassist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/—Pngtree—circuit board_1377943.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+body {
+    font-family: "Courier New", Courier, monospace;
+    color: var(--CONTACT_SILVER);
+    background-color: var(--PCB_GREEN);
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: var(--BOX_SHADOW);
+    background-color: var(--OPAQUE_PCB_GREEN);
+    gap: 2rem;
+    padding: 2rem;
+    margin: 20px;
+    border: 4px solid var(--TRACE_GOLD);
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--OPAQUE_PCB_GREEN);
+    color: var(--CONTACT_SILVER);
+    box-shadow: var(--BOX_SHADOW);
+    text-align: center;
+    padding: 1.5rem;
+    margin: 20px;
+    border: 4px solid var(--TRACE_GOLD);
+    font-family: "Courier New", Courier, monospace;
 }

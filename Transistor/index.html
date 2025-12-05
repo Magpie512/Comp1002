@@ -1,158 +1,104 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+    <script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Rohwedder Company</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="js/breadboys.js" defer></script>
+    <script src="scripts/page_simulator.js"></script>
+    <title>Transistor</title>
 </head>
 
 <body>
     <header>
-        <h1>The Rohwedder Company</h1>
-        <p class="tagline">The Sliced Bread Company</p>
+        <section class="logo">
+            <h1>The Transistor</h1>
+            <p class="tagline"> From Bell Labs</p>
+        </section>
         <nav>
-            <a href="#" onclick="showSection('home'); return false;">Showcase</a> |
-            <a href="#" onclick="showSection('catalogue'); return false;">Catalogue</a> |
-            <a href="#" onclick="showSection('reviews'); return false;">Reviews</a> |
-            <a href="#" onclick="showSection('how-it-works'); return false;">How It Works</a> |
-            <a href="#" onclick="showSection('contact'); return false;">Contact Us</a> |
-            <a href="#" onclick="showSection('corpo-info'); return false;">About Rohwedder Company</a>
+            <section class="navassist">
+            <a href="#" onclick="showSection('product_showcase'); return false;">Showcase</a> 
+            <a href="#" onclick="showSection('similar'); return false;">Similar Products</a> 
+            <a href="#" onclick="showSection('applications'); return false;">Applications </a> 
+        </section>
+        <section class="navassist">
+            <a href="#" onclick="showSection('demonstration'); return false;">How It Works</a> 
+            <a href="#" onclick="showSection('reviews'); return false;">Reviews</a> 
+            <a href="#" onclick="showSection('contact'); return false;">Contact Us</a> 
+        </section>
+        <section class="navassist">
+            <a href="#" onclick="showSection('corporate_info'); return false;">Bell Labs</a>
+        </section>
         </nav>
     </header>
-    <main>
-        <!--Showcase-->
-        <section id="home" class="content-section">
-            <div>
-                <h2>Welcome to The Rohwedder Company</h2>
-                <p>Discover the convenience of sliced bread, the greatest innovation in baking since the invention of
-                    bread itself!</p>
-                <img src="img/who-invented-sliced-breads-featured-photo.jpg" alt="Sliced Bread" width="400px">
-                <div>
-                    <p>Experience the ease of making sandwiches, toast, and more with perfectly sliced bread. Join the
-                        millions who have embraced this revolutionary product!</p>
-                   
-                        <div class="features-list">
-                        <ul>Key Features of Sliced Bread</ul>
-                    <li>Evenly sliced for consistent thickness</li>
-                    <li>Convenient and time-saving</li>
-                    <li>Perfect for sandwiches and toast</li>
-                    </ul>
-                    </div>
-                </div>
-        </section>
 
-        <!--Catalogue-->
-        <section id="catalogue" class="content-section" style="display:none;">
-            <h2>Product Catalogue</h2>
-            <div class="catalogue-item">
-                <h3>Standard Sliced Bread Loaf</h3>
-                <p>Our classic sliced bread loaf, perfect for everyday use.</p>
-                <p>Price: $0.05 per loaf</p>
-            </div>
-            <div class="catalogue-item">
-                <h3>Whole Wheat Sliced Bread</h3>
-                <p>A healthier option with the same great convenience.</p>
-                <p>Price: $0.06 per loaf</p>
-            </div>
-            <div class="catalogue-item">
-                <h3>Gluten-Free Sliced Bread</h3>
-                <p>Enjoy sliced bread without the gluten.</p>
-                <p>Price: $0.07 per loaf</p>
-            </div>
-        </section>
+<main>
+    <section id="product_showcase" class="content-section">
+        <h2>Product Showcase</h2>
+        <div class="showcase-content"></div>
+            <p>Discover the revolutionary transistor, a groundbreaking invention from Bell Laboratories that has transformed the world of electronics. This remarkable device amplifies and switches electronic signals, opening new possibilities in communication, computing, and beyond.</p>
 
-        <!--Reviews-->
-        <section id="reviews" class="content-section" style="display:none;">
-            <h2>Customer Reviews</h2>
-            <div class="review-item">
-                <h3>Jane D.</h3>
-                <p>"Sliced bread has changed my mornings! Toasting is so much easier now."</p>
+        </div>
+        <figure>
+            <img src="img/transistor-physicists-John-Bardeen-American-William-B.jpg" alt="Transistor inventors at Bell Labs demonstrating the device" class="content-image">
+            <figcaption>The transistor team at Bell Laboratories</figcaption>
+        </figure>
+        <!-- https://www.britannica.com/technology/transistor/Innovation-at-Bell-Labs -->
+         <div class="features">
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Compact solid-state design</li>
+                    <li>Low power consumption</li>
+                    <li>High reliability and durability</li>
+                    <li>Fast switching capabilities</li>
+                </ul>
             </div>
-            <div class="review-item">
-                <h3>John S.</h3>
-                <p>"I can't believe I ever lived without sliced bread. It's a game-changer!"</p>
-            </div>
-            <div class="review-item">
-                <h3>Mary K.</h3>
-                <p>"The convenience of sliced bread is unmatched. Highly recommend!"</p>
-            </div>
-        </section>
+    </section>
 
-        <!--How It Works-->
-        <section id="how-it-works" class="content-section" style="display:none;">
-            <h2>How Sliced Bread Works</h2>
-            <p>Our state-of-the-art slicing machine ensures each slice is perfectly even, making your bread experience
-                effortless.</p>
-            <img src="img/slicing-machine.jpg" alt="Slicing Machine" width="400px">
-            <!-- Placeholder image; replace with actual image of slicing machine -->
-        </section>
+    <!-- Similar Products -->
+    <section id="similar" class="content-section" style="display:none;">
+        <h2>Similar Products</h2>
+        <p>Explore other groundbreaking inventions from Bell Labs, including the integrated circuit and the laser, which have further advanced technology and innovation.</p>
+    </section>
 
-        <!--Contact Us-->
-        <section id="contact" class="content-section" style="display:none;">
-            <h2>Contact Us</h2>
-            <p>Have questions or want to place an order? Reach out to us!</p>
-            <form>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-                <input type="submit" value="Submit">
-            </form>
-        </section>
+    <!-- Applications -->
+    <section id="applications" class="content-section" style="display:none;">
+        <h2>Applications</h2>
+        <p>The transistor is widely used in various applications, from radios and televisions to computers and mobile devices, revolutionizing the way we communicate and process information.</p>
+    </section>
+    
+    <!-- Demonstration -->
+    <section id="demonstration" class="content-section" style="display:none;">
+        <h2>How It Works</h2>
+        <p>The transistor operates by using semiconductor materials to control the flow of electrical current. It consists of three layers: the emitter, base, and collector, which work together to amplify or switch signals.</p>
+    </section>
 
-        <!--Corporate Info-->
-        <section id="corpo-info" class="content-section" style="display:none;">
-            <h2>About The Rohwedder Company</h2>
+    <!-- Reviews -->
+    <section id="reviews" class="content-section" style="display:none;">
+        <h2>Reviews</h2>
+        <p>"The invention of the transistor has been a game-changer in the field of electronics. Its impact is immeasurable." - Tech Innovators Magazine</p>
+    </section>
 
-            <div class="corpo-section">
-                <h3>The Man Behind the Innovation</h3>
-                <p>Otto Frederick Rohwedder (1880-1960) was an American inventor and engineer who revolutionized the
-                    baking industry with his groundbreaking bread-slicing machine.</p>
-            </div>
+    <!-- Contact Information -->
+    <section id="contact" class="content-section" style="display:none;">
+        <h2>Contact Us</h2>
+        <p>For more information about the transistor and other Bell Labs innovations, please reach out to us at
+            <a href="mailto:info@belllabs.com">info@belllabs.com</a>.</p>
+    </section>
 
-            <div class="corpo-section">
-                <h3>Early Life</h3>
-                <p>Born July 7, 1880, in Davenport, Iowa, Rohwedder studied engineering at the University of Iowa. After
-                    working as a jeweler and watchmaker, he turned his attention to solving one of household America's
-                    most pressing needs: convenient bread.</p>
-            </div>
-
-            <div class="corpo-section">
-                <h3>The Journey to Innovation</h3>
-                <p>Beginning in 1912, Rohwedder dedicated himself to perfecting the bread-slicing machine. Despite a
-                    devastating fire in 1917 that destroyed his first prototype, his determination never wavered.</p>
-            </div>
-
-            <div class="corpo-section">
-                <h3>A Historic Breakthrough</h3>
-                <p>On July 7, 1928, Rohwedder's 48th birthday, the first commercially sliced bread was sold in
-                    Chillicothe, Missouri. The response was immediate and overwhelming. Within months, bakeries
-                    nationwide adopted this revolutionary technology.</p>
-            </div>
-
-            <div class="corpo-section">
-                <h3>Legacy</h3>
-                <p>Sliced bread became an American household staple, inspiring the famous phrase "the greatest thing
-                    since sliced bread." Otto Frederick Rohwedder's vision continues to simplify daily life for millions
-                    around the world.</p>
-            </div>
-        </section>
+    <!-- Corporate Information -->
+    <section id="corporate_info" class="content-section" style="display:none;">
+        <h2>Bell Labs</h2>
+        <p>Bell Laboratories, founded in 1925, has been at the forefront of technological innovation, contributing to numerous advancements in telecommunications and electronics.</p>
+    </section>
 
     </main>
-    <footer>
-        <p>&copy; 1928 The Rohwedder Company. All rights reserved.</p>
-        <p><em>"The greatest thing since... well, bread!"</em></p>
-        <p><a href="tel:+1234567890">(123) 456-7890</a> | <a
-                href="mailto:info@rohweddercompany.com">info@rohweddercompany.com</a> | <a
-                href="https://www.google.com/maps/place/123+Bread+St.,+Bakery+City,+USA" target="_blank"
-                rel="noopener noreferrer">123 Bread St., Bakery City, USA</a></p>
-        <p>Revolutionizing the Household Meal</p>
-    </footer>
-</body>
 
-</html>
+<footer>
+    <p>© 1947 Bell Labs. All rights reserved.</p>
+</footer>
+
+</body> 
