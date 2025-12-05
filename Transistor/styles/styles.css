@@ -1,0 +1,54 @@
+:root {
+    --PCB_GREEN: #145114;
+    --CONTACT_SILVER: #bbbbbb;
+    --TRACE_GOLD: #d4af37;
+    --AERO_BLUE: #6686de;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 2px solid black;
+}
+
+.logo {
+    width: 30vw;
+    height: auto;
+    filter: drop-shadow(5px 5px 5px black);
+    display: block;
+}
+
+header {
+    background-color: var(--PCB_GREEN);
+    color: var(--CONTACT_SILVER);
+    padding: 1rem;
+    margin: 20px;
+    filter: drop-shadow(5px 5px 5px black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    text-align: left;
+}
+
+header nav {
+    text-align: right;
+}
+
+header h1 {
+
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header .tagline {
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
