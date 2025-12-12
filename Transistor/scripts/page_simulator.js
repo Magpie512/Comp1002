@@ -1,3 +1,6 @@
+// I can't recall where I learned how to do this. I'm gonna say AI taught me how to do this. Idk man I was drunk
+// I do appreciate the notes I left for myself. Easy understanding for when I am overewhelmed
+
 // Function to show different sections - simple DOM manipulation
 function showSection(sectionName) {
     // Hide all sections first
@@ -10,6 +13,7 @@ function showSection(sectionName) {
     var targetSection = document.getElementById(sectionName);
     if (targetSection) {
         targetSection.style.display = 'block';
+        // Display mode - shift to block element (as oppose to none.)
     }
 }
 
@@ -25,12 +29,12 @@ var galleryImages = [
     {
         src: 'img/transistor-physicists-John-Bardeen-American-William-B.jpg',
         alt: 'Transistor inventors at Bell Labs demonstrating the device',
-        caption: 'The first point contact transistor'
+        caption: 'The first point contact transistor.'
     },
     { 
         src: 'img/transistor.jpg',
         alt: 'Close-up of a transistor component',
-        caption: 'Another Angle of the transistor'
+        caption: 'Another Angle of the transistor.'
     }
 ];
 
@@ -137,6 +141,7 @@ function addReview(event) {
     var starRating = '';
     for (var i = 1; i <= 5; i++) {
         starRating += i <= rating ? '★' : '☆';
+        // Windows Character Map //
     }
     
     // Get current date
