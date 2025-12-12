@@ -1,5 +1,4 @@
-// I can't recall where I learned how to do this. I'm gonna say AI taught me how to do this. Idk man I was drunk
-// I do appreciate the notes I left for myself. Easy understanding for when I am overewhelmed
+// W3S is the goat. I was studying and realised that it was the site I used to make this all.
 
 // Function to show different sections - simple DOM manipulation
 function showSection(sectionName) {
@@ -177,3 +176,4 @@ function addReview(event) {
     // Scroll to new review
     reviewCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
+
